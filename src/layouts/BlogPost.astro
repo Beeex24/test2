@@ -13,6 +13,8 @@ type Props = CollectionEntry<"blog">;
 
 const post = Astro.props as Props;
 const { title, description, pubDate, updatedDate, heroImage } = post.data;
+
+// Markdown本文をHTMLとして描画
 const { Content } = await render(post);
 ---
 
@@ -40,7 +42,8 @@ const { Content } = await render(post);
       }
 
       body {
-        font-family: "Zen Kaku Gothic New", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        font-family: "Zen Kaku Gothic New", "Segoe UI", Tahoma, Geneva, Verdana,
+          sans-serif;
         background: rgb(var(--gray-light-rgb));
         line-height: 1.6;
       }
@@ -271,7 +274,181 @@ const { Content } = await render(post);
         font-size: 1.1rem;
       }
 
-      /* ...（DevicePost.astroのprose系スタイルをここに移植）... */
+      .prose :global(h1) {
+        font-size: 2.2rem;
+        font-weight: 700;
+        margin: 2.5rem 0 1.5rem 0;
+        color: rgb(var(--gray-dark-rgb));
+        border-bottom: 3px solid rgb(var(--accent-rgb));
+        padding-bottom: 0.5rem;
+      }
+
+      .prose :global(h2) {
+        font-size: 1.8rem;
+        font-weight: 600;
+        margin: 2.5rem 0 1rem 0;
+        color: rgb(var(--gray-dark-rgb));
+        border-left: 4px solid rgb(var(--accent-rgb));
+        padding-left: 1rem;
+      }
+
+      .prose :global(h3) {
+        font-size: 1.4rem;
+        font-weight: 500;
+        margin: 2rem 0 0.8rem 0;
+        color: rgb(var(--gray-dark-rgb));
+      }
+
+      .prose :global(h4) {
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin: 1.8rem 0 0.6rem 0;
+        color: rgb(var(--gray-dark-rgb));
+      }
+
+      .prose :global(p) {
+        margin-bottom: 1.5rem;
+        text-align: justify;
+        line-height: 1.8;
+      }
+
+      .prose :global(strong) {
+        font-weight: 600;
+        color: rgb(var(--accent-rgb));
+      }
+
+      .prose :global(em) {
+        font-style: italic;
+        color: rgb(var(--gray-dark-rgb));
+      }
+
+      .prose :global(blockquote) {
+        margin: 2rem 0;
+        padding: 1.5rem;
+        background: rgba(var(--accent-rgb), 0.05);
+        border-left: 4px solid rgb(var(--accent-rgb));
+        border-radius: 0 8px 8px 0;
+        font-style: italic;
+        position: relative;
+      }
+
+      .prose :global(blockquote p) {
+        margin: 0;
+      }
+
+      .prose :global(blockquote::before) {
+        content: '"';
+        font-size: 4rem;
+        color: rgba(var(--accent-rgb), 0.3);
+        position: absolute;
+        top: -0.5rem;
+        left: 1rem;
+        font-family: serif;
+      }
+
+      .prose :global(code) {
+        background: rgba(156, 163, 175, 0.1);
+        padding: 0.2rem 0.4rem;
+        border-radius: 4px;
+        font-size: 0.9rem;
+        color: rgb(var(--accent-rgb));
+        font-family: "Courier New", monospace;
+      }
+
+      .prose :global(pre) {
+        background: rgb(var(--gray-dark-rgb));
+        color: white;
+        padding: 1.5rem;
+        border-radius: 8px;
+        overflow-x: auto;
+        margin: 1.5rem 0;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+      }
+
+      .prose :global(pre code) {
+        background: none;
+        padding: 0;
+        color: inherit;
+      }
+
+      .prose :global(ul),
+      .prose :global(ol) {
+        margin: 1.5rem 0;
+        padding-left: 2rem;
+      }
+
+      .prose :global(li) {
+        margin-bottom: 0.8rem;
+        line-height: 1.7;
+      }
+
+      .prose :global(ul li) {
+        list-style-type: disc;
+      }
+
+      .prose :global(ol li) {
+        list-style-type: decimal;
+      }
+
+      .prose :global(a) {
+        color: rgb(var(--accent-rgb));
+        text-decoration: none;
+        border-bottom: 2px solid transparent;
+        transition: var(--transition);
+      }
+
+      .prose :global(a:hover) {
+        border-bottom-color: rgb(var(--accent-rgb));
+      }
+
+      .prose :global(img) {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        margin: 2rem 0;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .prose :global(table) {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 2rem 0;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      .prose :global(th),
+      .prose :global(td) {
+        padding: 1rem;
+        text-align: left;
+        border-bottom: 1px solid rgba(156, 163, 175, 0.2);
+      }
+
+      .prose :global(th) {
+        background: rgba(var(--accent-rgb), 0.1);
+        font-weight: 600;
+        color: rgb(var(--gray-dark-rgb));
+      }
+
+      .prose :global(tr:hover) {
+        background: rgba(156, 163, 175, 0.05);
+      }
+
+      .prose :global(hr) {
+        border: none;
+        height: 2px;
+        background: linear-gradient(
+          90deg,
+          transparent,
+          rgba(156, 163, 175, 0.3),
+          transparent
+        );
+        margin: 3rem 0;
+      }
 
       /* サイドバースタイル */
       .sidebar h3 {
@@ -356,12 +533,25 @@ const { Content } = await render(post);
           line-height: 1.7;
         }
 
+        .prose :global(h1) {
+          font-size: 1.8rem;
+        }
+
+        .prose :global(h2) {
+          font-size: 1.5rem;
+        }
+
+        .prose :global(h3) {
+          font-size: 1.2rem;
+        }
+
         .ad-banner {
           padding: 12px;
           margin: 15px 0;
         }
       }
 
+      /* 480px以下のスマホ向け */
       @media (max-width: 480px) {
         :root {
           --content-padding: 0.5rem;
@@ -408,6 +598,31 @@ const { Content } = await render(post);
           font-size: 0.95rem;
         }
       }
+      /* アニメーション */
+      @keyframes fadeInUp {
+        from {
+          opacity: 0;
+          transform: translateY(20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      .article-header,
+      .prose,
+      .sidebar {
+        animation: fadeInUp 0.6s ease-out;
+      }
+
+      .prose {
+        animation-delay: 0.2s;
+      }
+
+      .sidebar {
+        animation-delay: 0.4s;
+      }
     </style>
   </head>
 
@@ -423,114 +638,119 @@ const { Content } = await render(post);
           CTR: 0.5-1.0% | 収益貢献度: 15-20%
         </div>
 
-        <div class="main-content">
-          <div class="article-area">
-            <!-- ヒーロー画像 -->
-            {heroImage && (
+        <article>
+          {
+            heroImage && (
               <div class="hero-section">
                 <div class="hero-image">
                   <img src={heroImage} alt={title} />
                   <div class="hero-overlay" />
                 </div>
               </div>
-            )}
+            )
+          }
 
-            <div class="article-header">
-              <div class="metadata">
-                <span class="date-badge"><FormattedDate date={pubDate} /></span>
-                {updatedDate && (
+          <div class="article-header">
+            <div class="metadata">
+              <span class="date-badge"><FormattedDate date={pubDate} /></span>
+              {
+                updatedDate && (
                   <span class="updated-badge">
                     更新: <FormattedDate date={updatedDate} />
                   </span>
-                )}
-              </div>
-              <h1 class="article-title">{title}</h1>
-              <hr class="title-divider" />
+                )
+              }
             </div>
-
-            <!-- 記事上部広告 -->
-            <div class="ad-banner content-ad">
-              <div class="effectiveness-label high">高効果</div>
-              <strong>記事上部広告 (300×250 or 336×280)</strong><br />
-              アフィリエイト・商品紹介<br />
-              CTR: 2.0-4.0% | 収益貢献度: 30-40%
-            </div>
-
-            <div class="prose">
-              <Content />
-            </div>
-
-            <!-- 記事下部広告 -->
-            <div class="ad-banner content-ad">
-              <div class="effectiveness-label high">高効果</div>
-              <strong>記事下部広告 (728×90 or 300×250)</strong><br />
-              関連記事・次の行動促進<br />
-              CTR: 2.5-4.5% | 収益貢献度: 20-30%
-            </div>
-
-            <div class="tips">
-              <h4>💡 収益最大化のための配置テクニック</h4>
-              <ul>
-                <li>
-                  <strong>記事上部・中間:</strong> 読者の関心が高い時点でアフィリエイト商品を配置
-                </li>
-                <li>
-                  <strong>サイドバー上部:</strong> 常に視界に入る位置で人気商品をアピール
-                </li>
-                <li>
-                  <strong>記事下部:</strong> 読了後の次のアクション（関連商品購入）を促進
-                </li>
-                <li>
-                  <strong>モバイル対応:</strong> スマホ表示では300×250サイズを優先
-                </li>
-                <li>
-                  <strong>A/Bテスト:</strong> 定期的に配置を変更して効果を測定
-                </li>
-              </ul>
-            </div>
+            <h1 class="article-title">{title}</h1>
+            <hr class="title-divider" />
           </div>
 
-          <div class="sidebar">
-            <div class="sidebar-section">
-              <h3>🎯 おすすめ商品</h3>
-              <div class="ad-banner sidebar-ad">
+          <div class="main-content">
+            <div class="article-area">
+              <!-- 記事上部広告 -->
+              <div class="ad-banner content-ad">
                 <div class="effectiveness-label high">高効果</div>
-                <strong>サイドバー上部 (300×250)</strong><br />
-                人気商品・セール情報<br />
-                CTR: 1.5-3.0% | 収益貢献度: 20-25%
+                <strong>記事上部広告 (300×250 or 336×280)</strong><br />
+                アフィリエイト・商品紹介<br />
+                CTR: 2.0-4.0% | 収益貢献度: 30-40%
               </div>
-            </div>
 
-            <div class="sidebar-section">
-              <h3>📈 人気ランキング</h3>
-              <div class="ad-banner sidebar-ad">
-                <div class="effectiveness-label medium">中効果</div>
-                <strong>ランキング広告 (300×150)</strong><br />
-                トップ商品紹介<br />
-                CTR: 1.0-2.0% | 収益貢献度: 10-15%
+              <div class="prose">
+                <Content />
               </div>
-            </div>
 
-            <div class="sidebar-section">
-              <h3>🔥 今週のセール</h3>
-              <div class="ad-banner sidebar-ad">
+              <!-- 記事下部広告 -->
+              <div class="ad-banner content-ad">
                 <div class="effectiveness-label high">高効果</div>
-                <strong>セール広告 (300×200)</strong><br />
-                限定オファー・緊急性<br />
-                CTR: 2.0-4.0% | 収益貢献度: 15-25%
+                <strong>記事下部広告 (728×90 or 300×250)</strong><br />
+                関連記事・次の行動促進<br />
+                CTR: 2.5-4.5% | 収益貢献度: 20-30%
+              </div>
+
+              <div class="tips">
+                <h4>💡 収益最大化のための配置テクニック</h4>
+                <ul>
+                  <li>
+                    <strong>記事上部・中間:</strong> 読者の関心が高い時点でアフィリエイト商品を配置
+                  </li>
+                  <li>
+                    <strong>サイドバー上部:</strong> 常に視界に入る位置で人気商品をアピール
+                  </li>
+                  <li>
+                    <strong>記事下部:</strong> 読了後の次のアクション（関連商品購入）を促進
+                  </li>
+                  <li>
+                    <strong>モバイル対応:</strong> スマホ表示では300×250サイズを優先
+                  </li>
+                  <li>
+                    <strong>A/Bテスト:</strong> 定期的に配置を変更して効果を測定
+                  </li>
+                </ul>
               </div>
             </div>
 
-            <div class="sidebar-section">
-              <div class="ad-banner sidebar-ad">
-                <div class="effectiveness-label low">低効果</div>
-                <strong>サイドバー下部 (300×250)</strong><br />
-                一般広告・補完的<br />
-                CTR: 0.5-1.5% | 収益貢献度: 5-10%
+            <div class="sidebar">
+              <div class="sidebar-section">
+                <h3>🎯 おすすめ商品</h3>
+                <div class="ad-banner sidebar-ad">
+                  <div class="effectiveness-label high">高効果</div>
+                  <strong>サイドバー上部 (300×250)</strong><br />
+                  人気商品・セール情報<br />
+                  CTR: 1.5-3.0% | 収益貢献度: 20-25%
+                </div>
+              </div>
+
+              <div class="sidebar-section">
+                <h3>📈 人気ランキング</h3>
+                <div class="ad-banner sidebar-ad">
+                  <div class="effectiveness-label medium">中効果</div>
+                  <strong>ランキング広告 (300×150)</strong><br />
+                  トップ商品紹介<br />
+                  CTR: 1.0-2.0% | 収益貢献度: 10-15%
+                </div>
+              </div>
+
+              <div class="sidebar-section">
+                <h3>🔥 今週のセール</h3>
+                <div class="ad-banner sidebar-ad">
+                  <div class="effectiveness-label high">高効果</div>
+                  <strong>セール広告 (300×200)</strong><br />
+                  限定オファー・緊急性<br />
+                  CTR: 2.0-4.0% | 収益貢献度: 15-25%
+                </div>
+              </div>
+
+              <div class="sidebar-section">
+                <div class="ad-banner sidebar-ad">
+                  <div class="effectiveness-label low">低効果</div>
+                  <strong>サイドバー下部 (300×250)</strong><br />
+                  一般広告・補完的<br />
+                  CTR: 0.5-1.5% | 収益貢献度: 5-10%
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </article>
       </div>
     </main>
     <Footer />
