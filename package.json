@@ -1,0 +1,20 @@
+{
+  "name": "smoggy-series",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/cloudflare": "^12.6.0",
+    "@astrojs/mdx": "^4.2.6",
+    "@astrojs/rss": "^4.0.11",
+    "@astrojs/sitemap": "^3.3.1",
+    "@fontsource/zen-kaku-gothic-new": "^5.2.6",
+    "astro": "^5.7.10",
+    "swiper": "^11.2.8"
+  }
+}
