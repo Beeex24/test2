@@ -1,7 +1,7 @@
 ---
 title: 'test2'
 description: 'ゲームサイト広告配置とおすすめゲーミングマウスの紹介'
-pubDate: '2025-06-15'
+pubDate: '2025-06-11'
 updatedDate: '2025-06-16'
 heroImage: '/00573.png'
 ---

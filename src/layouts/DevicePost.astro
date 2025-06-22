@@ -1,5 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
+import { getCollection } from "astro:content";
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
@@ -13,6 +14,13 @@ type Props = CollectionEntry<"device">;
 
 const post = Astro.props as Props;
 const { title, description, pubDate, updatedDate, heroImage } = post.data;
+
+// デバイス関連の投稿を取得
+// ここでは、デバイスに関連する投稿を取得し、日付順にソート
+const devicePosts = (await getCollection("device")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
 
 // Markdown本文をHTMLとして描画
 const { Content } = await render(post);
@@ -623,6 +631,130 @@ const { Content } = await render(post);
       .sidebar {
         animation-delay: 0.4s;
       }
+      /* 関連記事スタイル */
+      .recommended-posts {
+        margin: 3rem 0;
+        padding: 2rem;
+        background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      .recommended-posts h3 {
+        color: rgb(var(--gray-dark-rgb));
+        margin-bottom: 2rem;
+        font-size: 1.8rem;
+        font-weight: 700;
+        text-align: center;
+        border-bottom: 3px solid rgb(var(--accent-rgb));
+        padding-bottom: 1rem;
+      }
+
+      .post-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 1.5rem;
+      }
+
+      .related-post-item {
+        background: white;
+        border-radius: 12px;
+        overflow: hidden;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        cursor: pointer;
+      }
+
+      .related-post-item:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      .post-image {
+        width: 100%;
+        height: 180px;
+        overflow: hidden;
+        position: relative;
+      }
+
+      .post-image img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        transition: var(--transition);
+      }
+
+      .related-post-item:hover .post-image img {
+        transform: scale(1.05);
+      }
+
+      .post-content {
+        padding: 1.5rem;
+      }
+
+      .post-content h4 {
+        font-size: 1rem;
+        font-weight: 600;
+        color: rgb(var(--gray-dark-rgb));
+        line-height: 1.4;
+        margin-bottom: 0.8rem;
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+      }
+
+      .post-meta {
+        font-size: 0.85rem;
+        color: #6c757d;
+        margin: 0;
+      }
+
+      /* レスポンシブ対応 */
+      @media (max-width: 768px) {
+        .post-grid {
+          grid-template-columns: 1fr;
+          gap: 1rem;
+        }
+
+        .recommended-posts {
+          padding: 1.5rem;
+          margin: 2rem 0;
+        }
+
+        .recommended-posts h3 {
+          font-size: 1.5rem;
+          margin-bottom: 1.5rem;
+        }
+
+        .post-image {
+          height: 150px;
+        }
+
+        .post-content {
+          padding: 1rem;
+        }
+
+        .post-content h4 {
+          font-size: 0.95rem;
+          -webkit-line-clamp: 2;
+        }
+      }
+
+      @media (max-width: 480px) {
+        .post-grid {
+          grid-template-columns: 1fr;
+        }
+
+        .post-image {
+          height: 120px;
+        }
+
+        .recommended-posts {
+          padding: 1rem;
+          margin: 1.5rem 0;
+        }
+      }
     </style>
   </head>
 
@@ -679,13 +811,54 @@ const { Content } = await render(post);
                 <Content />
               </div>
 
-              <!-- 記事下部広告 -->
+
+
+             <!-- 記事下部広告 -->
               <div class="ad-banner content-ad">
                 <div class="effectiveness-label high">高効果</div>
                 <strong>記事下部広告 (728×90 or 300×250)</strong><br />
                 関連記事・次の行動促進<br />
                 CTR: 2.5-4.5% | 収益貢献度: 20-30%
               </div>
+
+
+
+              <!-- おすすめの記事 -->
+              <div class="recommended-posts">
+                <h3>📚 おすすめの記事</h3>
+                <div class="post-grid">
+                  {
+                    devicePosts.slice(0, 8).map((post) => (
+                      <a
+                        href={`/device/${post.id}/`}
+                        class="related-post-item"
+                        style="text-decoration:none;"
+                      >
+                        <div class="post-image">
+                          <img
+                            src={
+                              post.data.heroImage ?? "/placeholder-image.jpg"
+                            }
+                            alt={post.data.title}
+                          />
+                        </div>
+                        <div class="post-content">
+                          <h4>{post.data.title}</h4>
+                          <p class="post-meta">
+                            {post.data.pubDate
+                              ? new Date(post.data.pubDate).toLocaleDateString(
+                                  "ja-JP"
+                                )
+                              : ""}
+                          </p>
+                        </div>
+                      </a>
+                    ))
+                  }
+                </div>
+              </div>
+
+
 
               <div class="tips">
                 <h4>💡 収益最大化のための配置テクニック</h4>

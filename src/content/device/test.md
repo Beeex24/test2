@@ -1,7 +1,7 @@
 ---
 title: 'HyperX Alloy Origins 65 完全レビュー：コンパクトさと性能を両立した最新ゲーミングキーボード'
 description: ''
-pubDate: '2025-06-14'
+pubDate: '2025-06-15'
 updatedDate: '2025-06-14'
 heroImage: '/00573.png'
 ---
