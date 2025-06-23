@@ -17,8 +17,6 @@ const devicePosts = (await getCollection("device")).sort(
 const allPosts = [...posts, ...devicePosts].sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
-
-
 ---
 
 <!doctype html>
@@ -234,7 +232,8 @@ const allPosts = [...posts, ...devicePosts].sort(
       }
       @media (max-width: 768px) {
         .blog-slider-section {
-          padding: 1rem 0.2rem;
+          padding: 1rem 0.5rem;
+          margin: 2rem 0;
           max-width: 100vw;
           width: 100vw;
         }
@@ -318,7 +317,15 @@ const allPosts = [...posts, ...devicePosts].sort(
       .ad-top-right {
         display: none; /* モバイル画面では非表示 */
       }
-    }
+    
+      {
+        box-sizing: border-box;
+      }
+      html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+      }
   </style>
 
   <!-- 上部右側ディスプレイ広告 -->
@@ -468,7 +475,7 @@ const allPosts = [...posts, ...devicePosts].sort(
         <div class="swiper-container">
           <div class="swiper-wrapper">
             {
-              allPosts.map((post) => (
+              allPosts.slice(0, 10).map((post) => (
                 <div class="swiper-slide">
                   <a href={`/${post.collection}/${post.id}/`} class="blog-card">
                     <img src={post.data.heroImage} alt={post.data.title} />
@@ -851,13 +858,17 @@ const allPosts = [...posts, ...devicePosts].sort(
                 flex-direction: column;
                 align-items: center;
               }
+              .tab-section {
+                display: none;
+              }
             }
           </style>
         </head>
+
         <body>
           <!-- ページ中央　タブリスト表示 -->
           <section class="tab-section">
-            <h1>タブリスト</h1>
+            <h1>記事一覧</h1>
             <ul class="tab-list">
               <li class="tab-item active" data-tab="all">最新記事</li>
               <li class="tab-item" data-tab="blog">ブログ記事</li>
