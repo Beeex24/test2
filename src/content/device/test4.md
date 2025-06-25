@@ -4,6 +4,7 @@ description: 'ゲームサイト広告配置とおすすめゲーミングマウ
 pubDate: '2025-06-03'
 updatedDate: '2025-06-16'
 heroImage: '/00573.png'
+category: 'razer'
 ---
 
 # 🎮 ゲームサイト広告配置最適化ガイド

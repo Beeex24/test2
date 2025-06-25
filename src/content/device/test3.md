@@ -4,6 +4,7 @@ description: 'ホットスワップ対応75%レイアウト！Razer BlackWidow V
 pubDate: '2025-06-20'
 updatedDate: '2025-06-20'
 heroImage: '/razer-blackwidow-v4-75-hero.jpg'
+category: 'razer'
 ---
 
 # ⌨️ Razer BlackWidow V4 75% 完全レビューガイド

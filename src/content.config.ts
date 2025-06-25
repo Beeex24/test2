@@ -23,6 +23,8 @@ const device = defineCollection({
 		pubDate: z.coerce.date(),
 		updatedDate: z.coerce.date().optional(),
 		heroImage: z.string().optional(),
+		// カテゴリーフィールドを追加（オプショナル）
+		category: z.enum(['logicool', 'razer', 'steelseries', 'hyperx', 'corsair', 'benq', 'others']).optional(),
 	}),
 });
 

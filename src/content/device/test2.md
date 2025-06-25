@@ -1,5 +1,5 @@
 ---
-title: 'test2'
+title: 'Razer V2 mouse'
 description: 'ゲームサイト広告配置とおすすめゲーミングマウスの紹介'
 pubDate: '2025-06-02'
 updatedDate: '2025-06-16'

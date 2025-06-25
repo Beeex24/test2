@@ -1,5 +1,5 @@
 ---
-title: 'test2'
+title: 'Razer BlackManba KP3 75% 完全レビュー'
 description: 'ゲームサイト広告配置とおすすめゲーミングマウスの紹介'
 pubDate: '2025-06-08'
 updatedDate: '2025-06-16'
