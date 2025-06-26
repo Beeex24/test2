@@ -820,7 +820,7 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
                 // タイトルからカテゴリーを判定する簡易的な方法
                 const title = post.data.title.toLowerCase();
                 let category = "others";
-                if (title.includes("valorant") || title.includes("ヴァロラント")) {
+                if (title.includes("valorant") || title.includes("ヴァロラント") || title.includes("vct")) {
                   category = "valorant";
                 } else if (title.includes("overwatch2") || title.includes("オーバーウォッチ2")) {
                   category = "overwatch2";

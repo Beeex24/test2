@@ -1,16 +1,97 @@
 ---
-title: 'post2'
-description: 'Lorem ipsum dolor sit amet'
-pubDate: 'Jul 15 2022'
-heroImage: '/blog-placeholder-4.jpg'
+title: '【VALORANT】VCT Pacific Stage 2：千葉雄喜とのコラボアンセムとチケット販売開始！'
+description: 'VALORANT Champions Tour Pacific Stage 2の詳細情報。千葉雄喜氏とのコラボレーション楽曲「心配無用」のリリースや、韓国・日本での試合観戦チケット販売情報をお届けします。'
+pubDate: 'Jun 27 2025'
+heroImage: '/valorant/event/VCT.png'
+category: 'VALORANT'
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Vitae ultricies leo integer malesuada nunc vel risus commodo viverra. Adipiscing enim eu turpis egestas pretium. Euismod elementum nisi quis eleifend quam adipiscing. In hac habitasse platea dictumst vestibulum. Sagittis purus sit amet volutpat. Netus et malesuada fames ac turpis egestas. Eget magna fermentum iaculis eu non diam phasellus vestibulum lorem. Varius sit amet mattis vulputate enim. Habitasse platea dictumst quisque sagittis. Integer quis auctor elit sed vulputate mi. Dictumst quisque sagittis purus sit amet.
+**VCT Pacific Stage 2**がいよいよ開幕を迎えます！今回は、日本の有名ラッパー**千葉雄喜氏**とのコラボレーション楽曲や、待望のチケット販売情報など、見逃せない情報が盛りだくさんです。
 
-Morbi tristique senectus et netus. Id semper risus in hendrerit gravida rutrum quisque non tellus. Habitasse platea dictumst quisque sagittis purus sit amet. Tellus molestie nunc non blandit massa. Cursus vitae congue mauris rhoncus. Accumsan tortor posuere ac ut. Fringilla urna porttitor rhoncus dolor. Elit ullamcorper dignissim cras tincidunt lobortis. In cursus turpis massa tincidunt dui ut ornare lectus. Integer feugiat scelerisque varius morbi enim nunc. Bibendum neque egestas congue quisque egestas diam. Cras ornare arcu dui vivamus arcu felis bibendum. Dignissim suspendisse in est ante in nibh mauris. Sed tempus urna et pharetra pharetra massa massa ultricies mi.
+## 千葉雄喜氏とのコラボ楽曲「心配無用」が7月11日リリース！
 
-Mollis nunc sed id semper risus in. Convallis a cras semper auctor neque. Diam sit amet nisl suscipit. Lacus viverra vitae congue eu consequat ac felis donec. Egestas integer eget aliquet nibh praesent tristique magna sit amet. Eget magna fermentum iaculis eu non diam. In vitae turpis massa sed elementum. Tristique et egestas quis ipsum suspendisse ultrices. Eget lorem dolor sed viverra ipsum. Vel turpis nunc eget lorem dolor sed viverra. Posuere ac ut consequat semper viverra nam. Laoreet suspendisse interdum consectetur libero id faucibus. Diam phasellus vestibulum lorem sed risus ultricies tristique. Rhoncus dolor purus non enim praesent elementum facilisis. Ultrices tincidunt arcu non sodales neque. Tempus egestas sed sed risus pretium quam vulputate. Viverra suspendisse potenti nullam ac tortor vitae purus faucibus ornare. Fringilla urna porttitor rhoncus dolor purus non. Amet dictum sit amet justo donec enim.
+Stage 2の開幕を彩るのは、日本の人気ラッパー**千葉雄喜氏**が手がけるコラボレーションシングル「**心配無用**」です。この楽曲は千葉雄喜氏にとって初のゲームコラボレーションとなる記念すべき作品となります。
 
-Mattis ullamcorper velit sed ullamcorper morbi tincidunt. Tortor posuere ac ut consequat semper viverra. Tellus mauris a diam maecenas sed enim ut sem viverra. Venenatis urna cursus eget nunc scelerisque viverra mauris in. Arcu ac tortor dignissim convallis aenean et tortor at. Curabitur gravida arcu ac tortor dignissim convallis aenean et tortor. Egestas tellus rutrum tellus pellentesque eu. Fusce ut placerat orci nulla pellentesque dignissim enim sit amet. Ut enim blandit volutpat maecenas volutpat blandit aliquam etiam. Id donec ultrices tincidunt arcu. Id cursus metus aliquam eleifend mi.
+### 楽曲の特徴
+- **バウンシーなベースライン**とアップビートなドラムが特徴
+- 千葉雄喜氏の独特なフローがビートに完璧にマッチ
+- キャッチーなワンライナーと思わず口ずさみたくなるコーラス
+- **Coup D'Etat Recordings**より全世界同時リリース
 
-Tempus quam pellentesque nec nam aliquam sem. Risus at ultrices mi tempus imperdiet. Id porta nibh venenatis cras sed felis eget velit. Ipsum a arcu cursus vitae. Facilisis magna etiam tempor orci eu lobortis elementum. Tincidunt dui ut ornare lectus sit. Quisque non tellus orci ac. Blandit libero volutpat sed cras. Nec tincidunt praesent semper feugiat nibh sed pulvinar proin gravida. Egestas integer eget aliquet nibh praesent tristique magna.
+「心配無用」は**7月11日**にすべての配信プラットフォームでリリースされ、同日に[VCT Pacific公式YouTubeチャンネル](https://www.youtube.com/@VCTPacific)でミュージックビデオも公開されます。
+
+## Stage 2トーナメント形式と重要性
+
+今シーズンのStage 2では、**VALORANT Champions**への出場権を懸けた重要な戦いが繰り広げられます。
+
+![blog placeholder](/valorant/event/tonament.png)
+
+### 大会形式
+1. **グループステージ**：各グループ内でシングルラウンドロビン形式
+2. **プレイオフ**：各グループ上位4チームがダブルエリミネーション形式で対戦
+3. **Champions出場権**：上位2チームが直接出場権獲得
+4. **残り2枠**：2025年シーズン全体のチャンピオンシップポイントで決定
+
+## 開催スケジュール
+
+### 全体スケジュール
+- **開始日**：7月15日
+- **ファイナル**：8月30日～31日
+- **平日試合時間**：日本時間17:00スタート（7月15日～8月17日）
+
+### 開催地
+- **グループステージ・プレイオフ**：韓国ソウル - Sangam Colosseum
+- **ファイナル**：日本東京 - LaLa arena TOKYO-BAY
+
+## チケット販売情報
+
+### 韓国（グループステージ・プレイオフ）
+**販売開始**：日本時間6月27日14:00
+
+#### 購入方法
+- **韓国国外在住の方**：[Global Interpark](https://www.globalinterpark.com/ja/promotion/riot-games-2025)（日本語・英語対応）
+- **韓国在住の方**：[Interpark](https://ticket.interpark.com/Contents/Sports/GoodsInfo?SportsCode=07032&TeamCode=PE023)
+
+### 日本（ファイナル）
+**販売開始**：日本時間7月6日10:00
+
+#### 購入方法
+- **全世界対応**：[AXS](https://www.axs.com/jp/series/28348/vct-pacific-stage-2-finals-tokyo-tickets)
+
+## VCT Pacific Experience Zone
+
+韓国のSangam Colosseumでは、**無料で楽しめる特別エリア**が用意されています！
+
+### 体験内容
+- フォトブース
+- Pacificチームのグッズ売り場
+- 戦略ベアやウィングマンとの触れ合い
+- 大画面でのパブリックビューイング
+
+この特別エリアは**チケット不要**で楽しめるため、会場に足を運ぶだけで様々な体験ができます。
+
+## 多言語ライブ配信
+
+Stage 2は以下のスポンサーの提供により、多言語で配信されます：
+**Acer、Intel、Woori Bank、Pulsar、Red Bull、ZOWIE**
+
+### 主要配信チャンネル
+
+#### 日本語
+- **Twitch**：[VALORANT JP](https://www.twitch.tv/valorant_jpn)
+- **YouTube**：[VALORANT JP](https://www.youtube.com/@VALORANTjp)
+
+#### 英語
+- **Twitch**：[VALORANT Pacific](https://www.twitch.tv/valorant_pacific)
+- **YouTube**：[VCT Pacific](https://www.youtube.com/@VCTPacific)
+- **SOOP**：[VALORANT_EN](http://sooplive.com/valoranten)
+
+
+
+## まとめ
+
+VCT Pacific Stage 2は、千葉雄喜氏とのコラボ楽曲から始まり、Champions出場権を懸けた熱戦、そして日韓両国での現地観戦まで、VALORANTファンにとって見逃せないイベントとなっています。
+
+チケット販売も間もなく開始されるため、現地観戦を検討している方は販売開始時刻をお見逃しなく！また、現地に行けない方もYouTubeやTwichでの配信で試合を視聴することができます。
+
+**Stage 2で新たな歴史が刻まれる瞬間を、一緒に見届けましょう！**
