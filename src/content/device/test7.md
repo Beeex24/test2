@@ -3,7 +3,7 @@ title: 'Razer BlackWidow V4 75% 完全レビュー'
 description: 'ホットスワップ対応75%レイアウト！Razer BlackWidow V4 75%の詳細レビューと使用感'
 pubDate: '2025-06-05'
 updatedDate: '2025-06-20'
-heroImage: '/razer-blackwidow-v4-75-hero.jpg'
+heroImage: '/razer/razer-blackwidow-v4-75-hero.jpg'
 category: 'razer'
 ---
 
@@ -34,7 +34,7 @@ category: 'razer'
 
 ## 🎮 ゲーミング性能が凄い！
 
-![blog placeholder](/razer-blackwidow-v4-75-magnetic-plush-leatherette_desktop.jpg)
+![blog placeholder](/razer/razer-blackwidow-v4-75-magnetic-plush-leatherette_desktop.jpg)
 
 ### ⚡ Razer Snap Tap技術
 選択した 2 つのキーの間で、前のキーを離す必要なく最新の入力を優先します。FPSゲームでの素早い方向転換やADストレイフィングに威力を発揮します。これまでのキーボードでは不可能だった、ほぼ瞬時の方向転換が可能になります。
@@ -59,7 +59,7 @@ Razer Phantom キーキャップアップグレードセットが完全対応。
 
 また第 3 世代の RAZER™ オレンジ タクタイルメカニカルスイッチタクタイル感のある静音キーストロークを実現
 Razer オレンジ タクタイルメカニカルスイッチは、より静かなアクチュエーションを実現しながら、どのキーストロークでも満足のいくタクタイルバンプが感じられるため、クリック音を伴わないタクタイル感を求めるユーザーに最適です。
-![blog placeholder](/razer-blackwidow-v4-75-tactile-mechanical-switches-desktop.jpg)
+![blog placeholder](/razer/razer-blackwidow-v4-75-tactile-mechanical-switches-desktop.jpg)
 
 
 ### 🛠️ 内部構造のアップグレード
@@ -135,7 +135,7 @@ Razer Snap Tap技術により、従来のキーボードでは不可能だった
 
 ## 📝 まとめ
 
-![blog placeholder](/razer-blackwidow-v4-75-barebones-available_desktop_1920x700.jpg)
+![blog placeholder](/razer/razer-blackwidow-v4-75-barebones-available_desktop_1920x700.jpg)
 
 Razer BlackWidow V4 75%は、ホットスワップ対応という現代的な機能と、Razerらしい高品質なゲーミング性能を両立した優秀なキーボードです。
 
