@@ -282,16 +282,6 @@ const siteName = "ANYGAMES放送局";
         content: "🎯";
       }
 
-      .sidebar-ad {
-        background: rgba(155, 89, 182, 0.1);
-        border-color: #9b59b6;
-        margin: 15px 0;
-      }
-
-      .sidebar-ad::before {
-        content: "🎮";
-      }
-
       .effectiveness-label {
         position: absolute;
         top: -8px;
@@ -310,6 +300,126 @@ const siteName = "ANYGAMES放送局";
       }
       .low {
         background: #95a5a6;
+      }
+
+      /* 商品カードスタイル */
+      .product-card {
+        background: white;
+        border-radius: 12px;
+        padding: 15px;
+        margin-bottom: 20px;
+        box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+        transition: var(--transition);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .product-card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-card.sale {
+        border: 2px solid #e74c3c;
+        background: linear-gradient(135deg, #fff 0%, #fff5f5 100%);
+      }
+
+      .sale-badge {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: #e74c3c;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 20px;
+        font-size: 12px;
+        font-weight: bold;
+        z-index: 2;
+      }
+
+      .product-image {
+        width: 100%;
+        height: 150px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        transition: var(--transition);
+      }
+
+      .product-card:hover .product-image {
+        transform: scale(1.05);
+      }
+
+      .product-card h4 {
+        color: rgb(var(--gray-dark-rgb));
+        font-size: 1.1rem;
+        font-weight: 600;
+        margin-bottom: 8px;
+        line-height: 1.3;
+      }
+
+      .product-card p {
+        color: #6c757d;
+        font-size: 0.9rem;
+        line-height: 1.4;
+        margin-bottom: 10px;
+      }
+
+      .price {
+        color: #e74c3c !important;
+        font-size: 1.2rem !important;
+        font-weight: bold !important;
+        margin-bottom: 12px !important;
+      }
+
+      .original-price {
+        color: #6c757d;
+        font-size: 0.9rem;
+        text-decoration: line-through;
+        font-weight: normal;
+        margin-left: 8px;
+      }
+
+      .button {
+        display: block;
+        background: rgb(var(--accent-rgb));
+        color: white;
+        text-align: center;
+        padding: 10px 15px;
+        border-radius: 25px;
+        text-decoration: none;
+        font-weight: 500;
+        font-size: 0.9rem;
+        transition: var(--transition);
+        border: none;
+        cursor: pointer;
+      }
+
+      .button:hover {
+        background: rgba(var(--accent-rgb), 0.9);
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(var(--accent-rgb), 0.3);
+      }
+
+      .sale-button {
+        background: linear-gradient(135deg, #e74c3c 0%, #c0392b 100%);
+        animation: pulse 2s infinite;
+      }
+
+      .sale-button:hover {
+        background: linear-gradient(135deg, #c0392b 0%, #a93226 100%);
+      }
+
+      @keyframes pulse {
+        0% {
+          box-shadow: 0 0 0 0 rgba(231, 76, 60, 0.7);
+        }
+        70% {
+          box-shadow: 0 0 0 10px rgba(231, 76, 60, 0);
+        }
+        100% {
+          box-shadow: 0 0 0 0 rgba(231, 76, 60, 0);
+        }
       }
 
       /* プロースコンテンツ */
@@ -594,6 +704,24 @@ const siteName = "ANYGAMES放送局";
           padding: 12px;
           margin: 15px 0;
         }
+
+        .product-card {
+          padding: 12px;
+          margin-bottom: 15px;
+        }
+
+        .product-image {
+          height: 120px;
+        }
+
+        .product-card h4 {
+          font-size: 1rem;
+        }
+
+        .button {
+          padding: 8px 12px;
+          font-size: 0.85rem;
+        }
       }
 
       /* 480px以下のスマホ向け */
@@ -630,12 +758,6 @@ const siteName = "ANYGAMES放送局";
           padding: 10px;
           border-radius: 8px;
           margin-top: 10px;
-        }
-
-        .ad-banner {
-          padding: 8px;
-          margin: 10px 0;
-          font-size: 0.95rem;
         }
 
         .tips {
@@ -776,7 +898,7 @@ const siteName = "ANYGAMES放送局";
           font-size: 0.95rem;
           -webkit-line-clamp: 2;
         }
-        {
+        * {
           box-sizing: border-box;
         }
         html, body {
@@ -809,10 +931,8 @@ const siteName = "ANYGAMES放送局";
       <div class="container">
         <!-- ヘッダー広告 -->
         <div class="ad-banner header-ad">
-
           <strong>ヘッダー広告 (728×90 or 320×50)</strong><br />
           ブランド認知向け・ディスプレイ広告<br />
-
         </div>
 
         <article>
@@ -846,27 +966,23 @@ const siteName = "ANYGAMES放送局";
             <div class="article-area">
               <!-- 記事上部広告 -->
               <div class="ad-banner content-ad">
-
                 <strong>記事上部広告 (300×250 or 336×280)</strong><br />
                 アフィリエイト・商品紹介<br />
-
               </div>
 
               <div class="prose">
                 <Content />
               </div>
 
-             <!-- 記事下部広告 -->
+              <!-- 記事下部広告 -->
               <div class="ad-banner content-ad">
-
                 <strong>記事下部広告 (728×90 or 300×250)</strong><br />
                 関連記事・次の行動促進<br />
-
               </div>
 
               <!-- おすすめの記事 -->
               <div class="recommended-posts">
-                <h3>📚 おすすめの記事</h3>
+                <h3>📚 おすすめのデバイス記事</h3>
                 <div class="post-grid">
                   {
                     devicePosts.slice(0, 8).map((post) => (
@@ -918,41 +1034,46 @@ const siteName = "ANYGAMES放送局";
 
             <div class="sidebar">
               <div class="sidebar-section">
-                <h3>🎯 おすすめ商品</h3>
-                <div class="ad-banner sidebar-ad">
-                  <div class="effectiveness-label high">高効果</div>
-                  <strong>サイドバー上部 (300×250)</strong><br />
-                  人気商品・セール情報<br />
-                  CTR: 1.5-3.0% | 収益貢献度: 20-25%
+                <h3>🎯 デバイス特価情報</h3>
+                <div class="product-card">
+                  <img src="/images/steelseries-arctis-7.jpg" alt="SteelSeries Arctis 7" class="product-image" />
+                  <h4>SteelSeries Arctis 7</h4>
+                  <p>ワイヤレスゲーミングヘッドセット</p>
+                  <p class="price">¥18,800</p>
+                  <a href="https://www.amazon.co.jp/" target="_blank" class="button">Amazonで見る</a>
                 </div>
               </div>
 
               <div class="sidebar-section">
-                <h3>📈 人気ランキング</h3>
-                <div class="ad-banner sidebar-ad">
-                  <div class="effectiveness-label medium">中効果</div>
-                  <strong>ランキング広告 (300×150)</strong><br />
-                  トップ商品紹介<br />
-                  CTR: 1.0-2.0% | 収益貢献度: 10-15%
+                <h3>📈 人気デバイス</h3>
+                <div class="product-card">
+                  <img src="/images/corsair-k95-rgb.jpg" alt="Corsair K95 RGB" class="product-image" />
+                  <h4>Corsair K95 RGB Platinum</h4>
+                  <p>プレミアムメカニカルキーボード</p>
+                  <p class="price">¥24,800</p>
+                  <a href="https://www.amazon.co.jp/" target="_blank" class="button">Amazonで見る</a>
                 </div>
               </div>
 
               <div class="sidebar-section">
-                <h3>🔥 今週のセール</h3>
-                <div class="ad-banner sidebar-ad">
-                  <div class="effectiveness-label high">高効果</div>
-                  <strong>セール広告 (300×200)</strong><br />
-                  限定オファー・緊急性<br />
-                  CTR: 2.0-4.0% | 収益貢献度: 15-25%
+                <h3>🔥 限定セール</h3>
+                <div class="product-card sale">
+                  <div class="sale-badge">30% OFF</div>
+                  <img src="/images/hyperx-cloud-alpha.jpg" alt="HyperX Cloud Alpha" class="product-image" />
+                  <h4>HyperX Cloud Alpha</h4>
+                  <p>プロゲーマー御用達ヘッドセット</p>
+                  <p class="price">¥8,900 <span class="original-price">¥12,800</span></p>
+                  <a href="https://www.amazon.co.jp/" target="_blank" class="button sale-button">セール価格で見る</a>
                 </div>
               </div>
 
               <div class="sidebar-section">
-                <div class="ad-banner sidebar-ad">
-                  <div class="effectiveness-label low">低効果</div>
-                  <strong>サイドバー下部 (300×250)</strong><br />
-                  一般広告・補完的<br />
-                  CTR: 0.5-1.5% | 収益貢献度: 5-10%
+                <div class="product-card">
+                  <img src="/images/logitech-mx-master-3.jpg" alt="Logitech MX Master 3" class="product-image" />
+                  <h4>Logitech MX Master 3</h4>
+                  <p>高精度ワイヤレスマウス</p>
+                  <p class="price">¥11,500</p>
+                  <a href="https://www.amazon.co.jp/" target="_blank" class="button">Amazonで見る</a>
                 </div>
               </div>
             </div>
