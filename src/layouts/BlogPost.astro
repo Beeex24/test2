@@ -29,14 +29,14 @@ const ogImage = heroImage ? new URL(heroImage, Astro.site || Astro.url.origin).h
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin).href;
 
 // サイト名（適宜変更してください）
-const siteName = "ブログサイト";
+const siteName = "ANYGAMES放送局";
 ---
 
 <html lang="ja">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <BaseHead title={title} description={description} />
-    
+    <BaseHead   title={title} description={description} image={heroImage} ogType="article" siteName="ANYGAMES放送局" pubDate={pubDate} updatedDate={updatedDate} section="ブログ" tags={["ブログ記事"]} />
+
     <!-- OGP (Open Graph Protocol) メタタグ - 1つの画像のみ指定 -->
     <meta property="og:type" content="article" />
     <meta property="og:title" content={title} />
