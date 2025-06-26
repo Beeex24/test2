@@ -8,11 +8,32 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string;
+	ogType?: 'website' | 'article';
+	siteName?: string;
+	pubDate?: Date;
+	updatedDate?: Date;
+	section?: string;
+	tags?: string[];
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 
-const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
+const { 
+	title, 
+	description, 
+	image,
+	ogType = 'website',
+	siteName = SITE_TITLE,
+	pubDate,
+	updatedDate,
+	section,
+	tags = []
+} = Astro.props;
+
+// OGP用の画像URL（絶対URLに変換、フォールバック画像設定）
+const ogImage = image ? 
+	new URL(image, Astro.site || Astro.url.origin).href : 
+	new URL('/placeholder-image.jpg', Astro.site || Astro.url.origin).href;
 ---
 
 <!-- Global Metadata -->
@@ -39,17 +60,38 @@ const { title, description, image = '/blog-placeholder-1.jpg' } = Astro.props;
 <title>{title}</title>
 <meta name="title" content={title} />
 <meta name="description" content={description} />
+<meta name="robots" content="index, follow" />
 
 <!-- Open Graph / Facebook -->
-<meta property="og:type" content="website" />
-<meta property="og:url" content={Astro.url} />
+<meta property="og:type" content={ogType} />
+<meta property="og:url" content={canonicalURL} />
 <meta property="og:title" content={title} />
 <meta property="og:description" content={description} />
-<meta property="og:image" content={new URL(image, Astro.url)} />
+<meta property="og:image" content={ogImage} />
+<meta property="og:image:secure_url" content={ogImage} />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:type" content="image/jpeg" />
+<meta property="og:site_name" content={siteName} />
+<meta property="og:locale" content="ja_JP" />
 
-<!-- Twitter -->
-<meta property="twitter:card" content="summary_large_image" />
-<meta property="twitter:url" content={Astro.url} />
-<meta property="twitter:title" content={title} />
-<meta property="twitter:description" content={description} />
-<meta property="twitter:image" content={new URL(image, Astro.url)} />
+<!-- 記事固有のOGPタグ（ogType が 'article' の場合のみ） -->
+{ogType === 'article' && pubDate && (
+	<meta property="article:published_time" content={pubDate.toISOString()} />
+)}
+{ogType === 'article' && updatedDate && (
+	<meta property="article:modified_time" content={updatedDate.toISOString()} />
+)}
+{ogType === 'article' && section && (
+	<meta property="article:section" content={section} />
+)}
+{ogType === 'article' && tags.map(tag => (
+	<meta property="article:tag" content={tag} />
+))}
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={ogImage} />
+<meta name="twitter:image:alt" content={title} />
