@@ -15,19 +15,53 @@ type Props = CollectionEntry<"blog">;
 const post = Astro.props as Props;
 const { title, description, pubDate, updatedDate, heroImage } = post.data;
 
-
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
 // Markdown本文をHTMLとして描画
 const { Content } = await render(post);
+
+// OGP用の画像URL（絶対URLに変換）
+const ogImage = heroImage ? new URL(heroImage, Astro.site || Astro.url.origin).href : new URL('/placeholder-image.jpg', Astro.site || Astro.url.origin).href;
+
+// 現在のページURL
+const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin).href;
+
+// サイト名（適宜変更してください）
+const siteName = "ANYGAMES放送局";
 ---
 
 <html lang="ja">
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <BaseHead title={title} description={description} />
+    
+    <!-- OGP (Open Graph Protocol) メタタグ -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:url" content={canonicalURL} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:locale" content="ja_JP" />
+    
+    <!-- 記事固有のOGPタグ -->
+    <meta property="article:published_time" content={pubDate.toISOString()} />
+    {updatedDate && <meta property="article:modified_time" content={updatedDate.toISOString()} />}
+    <meta property="article:section" content="ブログ" />
+    <meta property="article:tag" content="ブログ記事" />
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    
+    <!-- 追加のメタタグ -->
+    <link rel="canonical" href={canonicalURL} />
+    <meta name="robots" content="index, follow" />
+    
     <style>
       :root {
         --content-width: 1200px;
@@ -825,8 +859,6 @@ const { Content } = await render(post);
                 CTR: 2.5-4.5% | 収益貢献度: 20-30%
               </div>
 
-
-
               <!-- おすすめの記事 -->
               <div class="recommended-posts">
                 <h3>📚 おすすめの記事</h3>
@@ -861,8 +893,6 @@ const { Content } = await render(post);
                   }
                 </div>
               </div>
-
-
 
               <div class="tips">
                 <h4>💡 収益最大化のための配置テクニック</h4>
