@@ -10,6 +10,8 @@ export default defineConfig({
   site: 'https://example.com',
   integrations: [mdx(), sitemap()],
 
+
+  site: 'https://test2-5ws.pages.dev',
   adapter: cloudflare(),
 
   // TypeScript設定を追加
