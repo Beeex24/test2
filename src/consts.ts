@@ -3,4 +3,3 @@
 
 export const SITE_TITLE = 'ANYGAMES放送局';
 export const SITE_DESCRIPTION = 'Welcome to my website!';
-export const SITE_HERO_IMAGE = '/00573.png';
