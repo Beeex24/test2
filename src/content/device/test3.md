@@ -1,9 +1,10 @@
 ---
-title: 'Razer BlackWidow V4 75% 完全レビュー'
-description: 'ホットスワップ対応75%レイアウト！Razer BlackWidow V4 75%の詳細レビューと使用感'
+
+meta property="og:title"　title: 'Razer BlackWidow V4 75% 完全レビュー'
+meta property="og:description"　description: 'ホットスワップ対応75%レイアウト！Razer BlackWidow V4 75%の詳細レビューと使用感'
 pubDate: '2025-06-20'
 updatedDate: '2025-06-20'
-heroImage: '/razer-blackwidow-v4-75-hero.jpg'
+meta property="og:image"　heroImage: '/razer-blackwidow-v4-75-hero.jpg'
 category: 'razer'
 ---
 
