@@ -3,7 +3,7 @@ title: '【VALORANT速報】新マップ「カロード」実装！パッチ11.0
 description: 'VALORANTパッチ11.00で新マップ「カロード」が遂に登場！ウェイレイ強化、レイナ・ネオン・フェニックス調整、コンペティティブランク変更など、最新アップデート情報を詳しく解説します。'
 pubDate: 'Jun 26 2025'
 heroImage: '/valorant/carode/karodemap1.png'
-category: 'ニュース'
+category: 'VALORANT'
 ---
 
 ## 【重要ポイント】パッチ11.00の主要アップデート

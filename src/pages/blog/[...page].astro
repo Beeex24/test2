@@ -385,32 +385,32 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
         z-index: 3;
       }
 
-      .blog-card-category.tech {
+      .blog-card-category.valorant {
         background: linear-gradient(135deg, #00b0ff, #0288d1);
         color: white;
       }
 
-      .blog-card-category.review {
+      .blog-card-category.overwatch2 {
         background: linear-gradient(135deg, #00ff4c, #00c853);
         color: white;
       }
 
-      .blog-card-category.news {
+      .blog-card-category.apexlegends {
         background: linear-gradient(135deg, #ff6b6b, #ee5a24);
         color: white;
       }
 
-      .blog-card-category.tutorial {
+      .blog-card-category.rainbowsixsiege {
         background: linear-gradient(135deg, #dc3545, #e74c3c);
         color: white;
       }
 
-      .blog-card-category.gaming {
+      .blog-card-category.minecraft {
         background: linear-gradient(135deg, #ffc107, #fd7e14);
         color: white;
       }
 
-      .blog-card-category.lifestyle {
+      .blog-card-category.grandtheftautovi {
         background: linear-gradient(135deg, #ffc100, #ff8f00);
         color: white;
       }
@@ -774,33 +774,33 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="tech">
-                テクノロジー
+              <button class="category-button" data-category="valorant">
+                ヴァロラント
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="review">
-                レビュー
+              <button class="category-button" data-category="overwatch2">
+                オーバーウォッチ2
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="news">
-                ニュース
+              <button class="category-button" data-category="apex legends">
+                エーペックスレジェンズ
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="tutorial">
-                チュートリアル
+              <button class="category-button" data-category="rainbow six siege">
+                レインボーシックスシージ
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="gaming">
-                ゲーミング
+              <button class="category-button" data-category="minecraft">
+                マインクラフト
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="lifestyle">
-                ライフスタイル
+              <button class="category-button" data-category="grand theft auto vi">
+                グランド・セフト・オートVI
               </button>
             </li>
             <li class="category-item">
@@ -820,18 +820,18 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
                 // タイトルからカテゴリーを判定する簡易的な方法
                 const title = post.data.title.toLowerCase();
                 let category = "others";
-                if (title.includes("tech") || title.includes("technology") || title.includes("テクノロジー")) {
-                  category = "tech";
-                } else if (title.includes("review") || title.includes("レビュー")|| title.includes("解説")) {
-                  category = "review";
-                } else if (title.includes("news") || title.includes("ニュース")|| title.includes("速報")) {
-                  category = "news";
-                } else if (title.includes("tutorial") || title.includes("チュートリアル") || title.includes("how to")) {
-                  category = "tutorial";
-                } else if (title.includes("gaming") || title.includes("ゲーム") || title.includes("game")) {
-                  category = "gaming";
-                } else if (title.includes("lifestyle") || title.includes("ライフスタイル")) {
-                  category = "lifestyle";
+                if (title.includes("valorant") || title.includes("ヴァロラント")) {
+                  category = "valorant";
+                } else if (title.includes("overwatch2") || title.includes("オーバーウォッチ2")) {
+                  category = "overwatch2";
+                } else if (title.includes("apexlegends") || title.includes("エーペックスレジェンズ")) {
+                  category = "apexlegends";
+                } else if (title.includes("rainbowsixsiege") || title.includes("レインボーシックスシージ") || title.includes("シージ")) {
+                  category = "rainbowsixsiege";
+                } else if (title.includes("minecraft") || title.includes("マインクラフト")) {
+                  category = "minecraft";
+                } else if (title.includes("grandtheftautovi") || title.includes("グランド・セフト・オートVI")) {
+                  category = "grandtheftautovi";
                 }
 
                 return (
@@ -846,18 +846,18 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
                       <div class="blog-card-image-overlay" />
                     </div>
                     <div class={`blog-card-category ${category}`}>
-                      {category === "tech"
-                        ? "テクノロジー"
-                        : category === "review"
-                          ? "レビュー"
-                          : category === "news"
-                            ? "ニュース"
-                            : category === "tutorial"
-                              ? "チュートリアル"
-                              : category === "gaming"
-                                ? "ゲーミング"
-                                : category === "lifestyle"
-                                  ? "ライフスタイル"
+                      {category === "valorant"
+                        ? "ヴァロラント"
+                        : category === "overwatch2"
+                          ? "オーバーウォッチ2"
+                          : category === "apexlegends"
+                            ? "エーペックスレジェンズ"
+                            : category === "rainbowsixsiege"
+                              ? "レインボーシックスシージ"
+                              : category === "minecraft"
+                                ? "マインクラフト"
+                                : category === "grandtheftautovi"
+                                  ? "グランド・セフト・オートVI"
                                   : "その他"}
                     </div>
                     <div class="blog-card-content">
