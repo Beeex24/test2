@@ -1,7 +1,7 @@
 ---
 title: '【VALORANT】VCT Pacific Stage 2：千葉雄喜とのコラボアンセムとチケット販売開始！'
 description: 'VALORANT Champions Tour Pacific Stage 2の詳細情報。千葉雄喜氏とのコラボレーション楽曲「心配無用」のリリースや、韓国・日本での試合観戦チケット販売情報をお届けします。'
-pubDate: 'Jun 27 2025'
+pubDate: 'Jun 24 2025'
 heroImage: '/valorant/event/VCT.png'
 category: 'VALORANT'
 ---

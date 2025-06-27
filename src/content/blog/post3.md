@@ -1,5 +1,5 @@
 ---
-title: 'VALORANTチャンピオンズ2025終了後の熱狂続く！秋冬の国際大会ラインナップを徹底解説'
+title: '【VALORANT】VALORANTチャンピオンズ2025終了後の熱狂続く！秋冬の国際大会ラインナップを徹底解説'
 description: 'Champions 2025終了後も止まらないVALORANT競技シーンの盛り上がり。Ascension、Game Changers Championship、Red Bull Home Groundなど、年末に向けた注目の国際イベント情報を詳しく紹介。'
 pubDate: 'Jun 27 2025'
 heroImage: '/valorant/event/VCT2.png'
