@@ -252,15 +252,45 @@ import Layout from '../layouts/Riyoukiyaku.astro';
   <script>
     import emailjs from '@emailjs/browser';
 
-    // EmailJS設定
+    // 環境変数の取得と検証
+    const SERVICE_ID = import.meta.env.PUBLIC_EMAILJS_SERVICE_ID;
+    const TEMPLATE_ID = import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID;
+    const PUBLIC_KEY = import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY;
+
+    // デバッグ用ログ（本番環境では削除してください）
+    console.log('EmailJS設定確認:');
+    console.log('SERVICE_ID:', SERVICE_ID);
+    console.log('TEMPLATE_ID:', TEMPLATE_ID);
+    console.log('PUBLIC_KEY:', PUBLIC_KEY ? '設定済み' : '未設定');
+
+    // 設定値の検証
+    if (!SERVICE_ID || !TEMPLATE_ID || !PUBLIC_KEY) {
+      console.error('EmailJS設定が不完全です。.envファイルを確認してください。');
+      console.error('必要な設定:', {
+        SERVICE_ID: SERVICE_ID ? '✓' : '✗',
+        TEMPLATE_ID: TEMPLATE_ID ? '✓' : '✗',
+        PUBLIC_KEY: PUBLIC_KEY ? '✓' : '✗'
+      });
+    }
+
+    // EmailJS設定オブジェクト
     const CONFIG = {
-      serviceId: import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
-      templateId: import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
-      publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
+      serviceId: SERVICE_ID,
+      templateId: TEMPLATE_ID,
+      publicKey: PUBLIC_KEY
     };
 
-    // EmailJS初期化
-    emailjs.init(CONFIG.publicKey);
+    // EmailJS初期化（設定が完全な場合のみ）
+    if (CONFIG.publicKey) {
+      try {
+        emailjs.init(CONFIG.publicKey);
+        console.log('EmailJS初期化完了');
+      } catch (error) {
+        console.error('EmailJS初期化エラー:', error);
+      }
+    } else {
+      console.error('EmailJS Public Keyが設定されていません');
+    }
 
     // DOM要素の取得
     const personalForm = document.getElementById('personalContactForm') as HTMLFormElement;
@@ -324,6 +354,13 @@ import Layout from '../layouts/Riyoukiyaku.astro';
     }
 
     async function handleFormSubmit(form: HTMLFormElement, submitButton: HTMLButtonElement) {
+      // 設定値の再確認
+      if (!CONFIG.serviceId || !CONFIG.templateId || !CONFIG.publicKey) {
+        showMessage('システム設定エラー：EmailJS設定が不完全です。管理者にお問い合わせください。', 'error');
+        console.error('EmailJS設定不完全:', CONFIG);
+        return;
+      }
+
       // バリデーション
       if (!validateForm(form)) {
         showMessage('必須項目を正しく入力してください。', 'error');
@@ -340,11 +377,21 @@ import Layout from '../layouts/Riyoukiyaku.astro';
         hiddenInput.value = new Date().toLocaleString('ja-JP');
         form.appendChild(hiddenInput);
 
+        console.log('メール送信開始...');
+        console.log('使用する設定:', {
+          serviceId: CONFIG.serviceId,
+          templateId: CONFIG.templateId,
+          publicKey: CONFIG.publicKey ? '設定済み' : '未設定'
+        });
+
         const result = await emailjs.sendForm(
           CONFIG.serviceId,
           CONFIG.templateId,
-          form
+          form,
+          CONFIG.publicKey
         );
+
+        console.log('EmailJS送信結果:', result);
 
         if (result.status === 200) {
           showMessage('お問い合わせを正常に送信いたしました。ご連絡いただきありがとうございます。', 'success');
@@ -356,12 +403,25 @@ import Layout from '../layouts/Riyoukiyaku.astro';
             field.classList.remove('valid', 'invalid');
           });
         } else {
-          throw new Error('送信に失敗しました');
+          throw new Error(`送信に失敗しました (status: ${result.status})`);
         }
 
       } catch (error) {
-        console.error('EmailJS Error:', error);
-        showMessage('送信中にエラーが発生しました。しばらく時間をおいて再度お試しください。', 'error');
+        console.error('EmailJS送信エラー:', error);
+        
+        let errorMessage = '送信中にエラーが発生しました。';
+        
+        if (error instanceof Error) {
+          if (error.message.includes('public key')) {
+            errorMessage = 'システム設定エラー：EmailJS設定を確認してください。';
+          } else if (error.message.includes('template')) {
+            errorMessage = 'テンプレート設定エラー：管理者にお問い合わせください。';
+          } else if (error.message.includes('service')) {
+            errorMessage = 'サービス設定エラー：管理者にお問い合わせください。';
+          }
+        }
+        
+        showMessage(errorMessage + ' しばらく時間をおいて再度お試しください。', 'error');
       } finally {
         toggleSubmitButton(submitButton, false);
       }
