@@ -44,4 +44,12 @@ export default defineConfig({
       footnoteLabel: "脚注"
     }
   }
+  vite: {
+    define: {
+      // 必要に応じて環境変数を明示的に定義
+      'import.meta.env.PUBLIC_EMAILJS_SERVICE_ID': JSON.stringify(process.env.PUBLIC_EMAILJS_SERVICE_ID),
+      'import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID': JSON.stringify(process.env.PUBLIC_EMAILJS_TEMPLATE_ID),
+      'import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY': JSON.stringify(process.env.PUBLIC_EMAILJS_PUBLIC_KEY),
+    }
+  }
 });
