@@ -2,7 +2,7 @@
 layout: ../layouts/aboutsite.astro
 title: "ANYGAMES放送局、ついにリリース！"
 description: "ゲーム情報の新たな発信地が誕生しました"
-pubDate: 2025-06-16
+pubDate: 2025-07-01
 author: "編集部"
 ---
 
@@ -36,5 +36,5 @@ ANYGAMES放送局では、VALORANTを中心としながらも、今後は他の�
 
 **ANYGAMES放送局で、一緒にゲームライフを充実させましょう！**
 
-公開日: 2025年6月16日
+公開日: 2025年7月1日
 ANYGAMES放送局編集部

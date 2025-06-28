@@ -297,27 +297,31 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
         border: 2px solid transparent;
       }
 
-      .blog-card[data-category="tech"] {
+      .blog-card[data-category="valorant"] {
         border-color: rgba(0, 176, 255, 0.3);
       }
 
-      .blog-card[data-category="review"] {
+      .blog-card[data-category="overwatch2"] {
         border-color: rgba(0, 255, 76, 0.3);
       }
 
-      .blog-card[data-category="news"] {
+      .blog-card[data-category="apexlegends"] {
         border-color: rgba(255, 193, 0, 0.3);
       }
 
-      .blog-card[data-category="tutorial"] {
+      .blog-card[data-category="rainbowsixsiege"] {
         border-color: rgba(255, 107, 107, 0.3);
       }
 
-      .blog-card[data-category="gaming"] {
+      .blog-card[data-category="minecraft"] {
         border-color: rgba(255, 193, 7, 0.3);
       }
 
-      .blog-card[data-category="lifestyle"] {
+      .blog-card[data-category="grandtheftautovi"] {
+        border-color: rgba(220, 53, 69, 0.3);
+      }
+
+      .blog-card[data-category="sale"] {
         border-color: rgba(220, 53, 69, 0.3);
       }
 
@@ -412,6 +416,11 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
 
       .blog-card-category.grandtheftautovi {
         background: linear-gradient(135deg, #ffc100, #ff8f00);
+        color: white;
+      }
+
+      .blog-card-category.sale {
+        background: linear-gradient(135deg, #21ff58, #24d6ee);
         color: white;
       }
 
@@ -803,6 +812,11 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
                 グランド・セフト・オートVI
               </button>
             </li>
+                        <li class="category-item">
+              <button class="category-button" data-category="sale">
+               最新セール情報
+              </button>
+            </li>
             <li class="category-item">
               <button class="category-button" data-category="others">
                 その他
@@ -832,7 +846,10 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
                   category = "minecraft";
                 } else if (title.includes("grandtheftautovi") || title.includes("グランド・セフト・オートVI")) {
                   category = "grandtheftautovi";
+                } else if (title.includes("sale") || title.includes("セール")) {
+                  category = "sale";
                 }
+
 
                 return (
                   <a
@@ -858,7 +875,9 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
                                 ? "マインクラフト"
                                 : category === "grandtheftautovi"
                                   ? "グランド・セフト・オートVI"
-                                  : "その他"}
+                                  : category === "sale"
+                                    ? "セール"
+                                    : "その他"}
                     </div>
                     <div class="blog-card-content">
                       <div class="blog-card-title">{post.data.title}</div>

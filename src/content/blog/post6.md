@@ -1,5 +1,5 @@
 ---
-title: 'Minecraft最新アップデート「Chase the Skies」と「Vibrant Visuals」が配信開始！飛行マウントとグラフィック刷新で空の冒険が始まる'
+title: '【MINECRAFT】Minecraft最新アップデート「Chase the Skies」と「Vibrant Visuals」が配信開始！飛行マウントとグラフィック刷新で空の冒険が始まる'
 description: 'Minecraft最新アップデート「Chase the Skies」でハッピーガストに乗って空を飛び、「Vibrant Visuals」で美しくなったグラフィックを楽しもう。新機能の詳細と対応デバイスを徹底解説！'
 pubDate: 'June 27 2025'
 heroImage: '/minecraft/maikura1.png'
@@ -88,11 +88,5 @@ Amos Roddyによる5つの新しいアンビエント楽曲がオーバーワー
 ### 🎮 プレイヤーの反応と活用方法
 
 Minecraftファンの間では、ハッピーガストの意外な使い方が既に発見されており、建築者にとって従来の足場よりも便利な空中プラットフォームとして活用できることが判明しています。
-
-### 🏆 SEO要約：Minecraftの新時代到来
-
-2025年6月17日にリリースされた「Chase the Skies」アップデートと「Vibrant Visuals」により、Minecraftは新たな次元に進化しました。ハッピーガストによる空中移動と美しいグラフィック表現で、プレイヤーの冒険はさらに魅力的になります。
-
-**キーワード**: Minecraft アップデート、Chase the Skies、Vibrant Visuals、ハッピーガスト、飛行マウント、グラフィック改善、2025年最新情報
 
 ---
