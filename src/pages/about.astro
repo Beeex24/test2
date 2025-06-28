@@ -11,26 +11,35 @@ import Layout from '../layouts/Riyoukiyaku.astro';
     <h2>お問い合わせフォーム</h2>
     <p class="contact-desc">
       以下のフォームに必要事項をご記入の上、送信してください。<br />
-      仮のお問い合わせ先: <a href="mailto:beta.infoblog@gmail.com">beta.infoblog@gmail.com</a>
+      お急ぎの場合: <a href="mailto:beta.infoblog@gmail.com">beta.infoblog@gmail.com</a>
     </p>
-    <div class="alert">~~~改修中の為以下は利用できません~~~</div>
+
+    <!-- メッセージ表示エリア -->
+    <div id="formFeedback" class="feedback-message"></div>
 
     <div class="form-block">
       <h3>個人のお客様向け</h3>
-      <form class="contact-form" action="/api/contact" method="POST" id="contactForm">
+      <form class="contact-form" id="personalContactForm">
+        <!-- 隠しフィールド（EmailJSテンプレート用） -->
+        <input type="hidden" name="form_type" value="個人のお客様" />
+        <input type="hidden" name="to_email" value="beta.infoblog@gmail.com" />
+        
         <div class="form-group">
-          <label for="name">お名前 <span class="required">*</span></label>
-          <input type="text" id="name" name="name" placeholder="お名前を入力してください" required />
+          <label for="user_name">お名前 <span class="required">*</span></label>
+          <input type="text" id="user_name" name="user_name" placeholder="お名前を入力してください" required />
         </div>
         <div class="form-group">
-          <label for="email">メールアドレス <span class="required">*</span></label>
-          <input type="email" id="email" name="email" placeholder="メールアドレスを入力してください" required />
+          <label for="user_email">メールアドレス <span class="required">*</span></label>
+          <input type="email" id="user_email" name="user_email" placeholder="メールアドレスを入力してください" required />
         </div>
         <div class="form-group">
           <label for="message">お問い合わせ内容 <span class="required">*</span></label>
           <textarea id="message" name="message" rows="5" placeholder="お問い合わせ内容を入力してください" required></textarea>
         </div>
-        <button type="submit" class="submit-button">送信</button>
+        <button type="submit" class="submit-button" id="personalSubmitBtn">
+          <span class="btn-text">送信</span>
+          <span class="loading-spinner" style="display: none;"></span>
+        </button>
       </form>
     </div>
 
@@ -38,27 +47,33 @@ import Layout from '../layouts/Riyoukiyaku.astro';
 
     <div class="form-block">
       <h3>法人・団体のお客様向け</h3>
-      <form class="contact-form" action="/api/corporate-contact" method="POST" id="corporateContactForm">
+      <form class="contact-form" id="corporateContactForm">
+        <!-- 隠しフィールド（EmailJSテンプレート用） -->
+        <input type="hidden" name="form_type" value="法人・団体のお客様" />
+        <input type="hidden" name="to_email" value="beta.infoblog@gmail.com" />
+        
         <div class="form-group">
-          <label for="companyName">会社名・団体名 <span class="required">*</span></label>
-          <input type="text" id="companyName" name="companyName" placeholder="会社名・団体名を入力してください" required />
+          <label for="company_name">会社名・団体名 <span class="required">*</span></label>
+          <input type="text" id="company_name" name="company_name" placeholder="会社名・団体名を入力してください" required />
         </div>
         <div class="form-group">
-          <label for="contactPerson">ご担当者様名 <span class="required">*</span></label>
-          <input type="text" id="contactPerson" name="contactPerson" placeholder="ご担当者様名を入力してください" required />
+          <label for="contact_person">ご担当者様名 <span class="required">*</span></label>
+          <input type="text" id="contact_person" name="contact_person" placeholder="ご担当者様名を入力してください" required />
         </div>
         <div class="form-group">
-          <label for="corporateEmail">メールアドレス <span class="required">*</span></label>
-          <input type="email" id="corporateEmail" name="corporateEmail" placeholder="メールアドレスを入力してください" required />
+          <label for="corporate_email">メールアドレス <span class="required">*</span></label>
+          <input type="email" id="corporate_email" name="corporate_email" placeholder="メールアドレスを入力してください" required />
         </div>
         <div class="form-group">
-          <label for="corporateMessage">お問い合わせ内容 <span class="required">*</span></label>
-          <textarea id="corporateMessage" name="corporateMessage" rows="5" placeholder="お問い合わせ内容を入力してください" required></textarea>
+          <label for="corporate_message">お問い合わせ内容 <span class="required">*</span></label>
+          <textarea id="corporate_message" name="corporate_message" rows="5" placeholder="お問い合わせ内容を入力してください" required></textarea>
         </div>
-        <button type="submit" class="submit-button">送信</button>
+        <button type="submit" class="submit-button" id="corporateSubmitBtn">
+          <span class="btn-text">送信</span>
+          <span class="loading-spinner" style="display: none;"></span>
+        </button>
       </form>
     </div>
-    <div id="formFeedback" style="margin-top: 1rem; color: green;"></div>
   </section>
 
   <style>
@@ -83,15 +98,41 @@ import Layout from '../layouts/Riyoukiyaku.astro';
       color: #444;
       font-size: 1.05rem;
     }
-    .alert {
-      background: #fff3cd;
-      color: #856404;
-      border: 1px solid #ffeeba;
+    .contact-desc a {
+      color: #007bff;
+      text-decoration: none;
+    }
+    .contact-desc a:hover {
+      text-decoration: underline;
+    }
+    .feedback-message {
+      margin: 1rem 0;
+      padding: 1rem;
       border-radius: 6px;
-      padding: 0.7rem 1rem;
-      margin-bottom: 1.5rem;
+      font-weight: 500;
       text-align: center;
-      font-weight: bold;
+      display: none;
+      animation: slideIn 0.3s ease-out;
+    }
+    .feedback-message.success {
+      background-color: #d4edda;
+      color: #155724;
+      border: 1px solid #c3e6cb;
+    }
+    .feedback-message.error {
+      background-color: #f8d7da;
+      color: #721c24;
+      border: 1px solid #f5c6cb;
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateY(-10px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
     .form-block {
       margin-bottom: 2.5rem;
@@ -130,32 +171,63 @@ import Layout from '../layouts/Riyoukiyaku.astro';
     .form-group input,
     .form-group textarea {
       padding: 0.7rem;
-      border: 1px solid #bbb;
+      border: 2px solid #bbb;
       border-radius: 4px;
       font-size: 1rem;
       background: #fff;
-      transition: border 0.2s;
+      transition: border-color 0.3s ease;
     }
     .form-group input:focus,
     .form-group textarea:focus {
       border-color: #007bff;
       outline: none;
       background: #f0f8ff;
+      box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+    }
+    .form-group input.valid {
+      border-color: #28a745;
+    }
+    .form-group input.invalid,
+    .form-group textarea.invalid {
+      border-color: #dc3545;
     }
     .submit-button {
       padding: 0.8rem 1.5rem;
-      background-color: #007bff;
+      background: linear-gradient(135deg, #007bff, #0056b3);
       color: #fff;
       border: none;
       border-radius: 4px;
       font-size: 1.1rem;
       font-weight: bold;
       cursor: pointer;
-      transition: background 0.2s;
+      transition: all 0.3s ease;
       margin-top: 0.5rem;
+      position: relative;
+      min-width: 120px;
     }
-    .submit-button:hover {
-      background-color: #0056b3;
+    .submit-button:hover:not(:disabled) {
+      background: linear-gradient(135deg, #0056b3, #004085);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 12px rgba(0, 123, 255, 0.3);
+    }
+    .submit-button:disabled {
+      background: #6c757d;
+      cursor: not-allowed;
+      transform: none;
+      box-shadow: none;
+    }
+    .loading-spinner {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      border: 2px solid #ffffff;
+      border-top: 2px solid transparent;
+      border-radius: 50%;
+      animation: spin 1s linear infinite;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
     }
     .section-divider {
       border: none;
@@ -176,4 +248,176 @@ import Layout from '../layouts/Riyoukiyaku.astro';
       }
     }
   </style>
+
+  <script>
+    import emailjs from '@emailjs/browser';
+
+    // EmailJS設定
+    const CONFIG = {
+      serviceId: import.meta.env.PUBLIC_EMAILJS_SERVICE_ID,
+      templateId: import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID,
+      publicKey: import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY
+    };
+
+    // EmailJS初期化
+    emailjs.init(CONFIG.publicKey);
+
+    // DOM要素の取得
+    const personalForm = document.getElementById('personalContactForm') as HTMLFormElement;
+    const corporateForm = document.getElementById('corporateContactForm') as HTMLFormElement;
+    const feedbackDiv = document.getElementById('formFeedback') as HTMLElement;
+
+    // ユーティリティ関数
+    function showMessage(text: string, type: 'success' | 'error') {
+      feedbackDiv.textContent = text;
+      feedbackDiv.className = `feedback-message ${type}`;
+      feedbackDiv.style.display = 'block';
+      
+      // 5秒後に非表示
+      setTimeout(() => {
+        feedbackDiv.style.display = 'none';
+      }, 5000);
+
+      // 成功時は画面上部にスクロール
+      if (type === 'success') {
+        feedbackDiv.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+
+    function toggleSubmitButton(button: HTMLButtonElement, loading: boolean) {
+      const btnText = button.querySelector('.btn-text') as HTMLElement;
+      const spinner = button.querySelector('.loading-spinner') as HTMLElement;
+      
+      button.disabled = loading;
+      btnText.style.display = loading ? 'none' : 'inline';
+      spinner.style.display = loading ? 'inline-block' : 'none';
+    }
+
+    function validateForm(form: HTMLFormElement): boolean {
+      const requiredFields = form.querySelectorAll('[required]') as NodeListOf<HTMLInputElement | HTMLTextAreaElement>;
+      let isValid = true;
+
+      requiredFields.forEach(field => {
+        const value = field.value.trim();
+        
+        if (!value) {
+          field.classList.add('invalid');
+          field.classList.remove('valid');
+          isValid = false;
+        } else if (field.type === 'email') {
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(value)) {
+            field.classList.add('invalid');
+            field.classList.remove('valid');
+            isValid = false;
+          } else {
+            field.classList.add('valid');
+            field.classList.remove('invalid');
+          }
+        } else {
+          field.classList.add('valid');
+          field.classList.remove('invalid');
+        }
+      });
+
+      return isValid;
+    }
+
+    async function handleFormSubmit(form: HTMLFormElement, submitButton: HTMLButtonElement) {
+      // バリデーション
+      if (!validateForm(form)) {
+        showMessage('必須項目を正しく入力してください。', 'error');
+        return;
+      }
+
+      toggleSubmitButton(submitButton, true);
+
+      try {
+        // 現在の日時を追加
+        const hiddenInput = document.createElement('input');
+        hiddenInput.type = 'hidden';
+        hiddenInput.name = 'send_date';
+        hiddenInput.value = new Date().toLocaleString('ja-JP');
+        form.appendChild(hiddenInput);
+
+        const result = await emailjs.sendForm(
+          CONFIG.serviceId,
+          CONFIG.templateId,
+          form
+        );
+
+        if (result.status === 200) {
+          showMessage('お問い合わせを正常に送信いたしました。ご連絡いただきありがとうございます。', 'success');
+          form.reset();
+          
+          // バリデーションクラスをリセット
+          const fields = form.querySelectorAll('.valid, .invalid');
+          fields.forEach(field => {
+            field.classList.remove('valid', 'invalid');
+          });
+        } else {
+          throw new Error('送信に失敗しました');
+        }
+
+      } catch (error) {
+        console.error('EmailJS Error:', error);
+        showMessage('送信中にエラーが発生しました。しばらく時間をおいて再度お試しください。', 'error');
+      } finally {
+        toggleSubmitButton(submitButton, false);
+      }
+    }
+
+    // イベントリスナーの設定
+    if (personalForm) {
+      personalForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = document.getElementById('personalSubmitBtn') as HTMLButtonElement;
+        handleFormSubmit(personalForm, submitBtn);
+      });
+    }
+
+    if (corporateForm) {
+      corporateForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        const submitBtn = document.getElementById('corporateSubmitBtn') as HTMLButtonElement;
+        handleFormSubmit(corporateForm, submitBtn);
+      });
+    }
+
+    // リアルタイムバリデーション
+    function setupRealTimeValidation(form: HTMLFormElement) {
+      const requiredFields = form.querySelectorAll('[required]') as NodeListOf<HTMLInputElement | HTMLTextAreaElement>;
+      
+      requiredFields.forEach(field => {
+        field.addEventListener('blur', () => {
+          const value = field.value.trim();
+          
+          if (!value) {
+            field.classList.add('invalid');
+            field.classList.remove('valid');
+          } else if (field.type === 'email') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) {
+              field.classList.add('invalid');
+              field.classList.remove('valid');
+            } else {
+              field.classList.add('valid');
+              field.classList.remove('invalid');
+            }
+          } else {
+            field.classList.add('valid');
+            field.classList.remove('invalid');
+          }
+        });
+
+        // 入力中はバリデーションクラスをリセット
+        field.addEventListener('input', () => {
+          field.classList.remove('valid', 'invalid');
+        });
+      });
+    }
+
+    if (personalForm) setupRealTimeValidation(personalForm);
+    if (corporateForm) setupRealTimeValidation(corporateForm);
+  </script>
 </Layout>
