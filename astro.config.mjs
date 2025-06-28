@@ -7,12 +7,9 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
-  integrations: [mdx(), sitemap()],
-
-
   site: 'https://test2-5ws.pages.dev',
   adapter: cloudflare(),
+  integrations: [mdx(), sitemap()],
 
   // TypeScript設定を追加
   typescript: {
@@ -20,12 +17,8 @@ export default defineConfig({
     strict: false,
     checkJs: false
   },
-  // Vite設定でesbuildのターゲットを指定
-  vite: {
-    esbuild: {
-      target: 'es2020'
-    }
-  },
+
+  // Markdown設定
   markdown: {
     // remarkプラグインはimportしたものを配列で指定
     remarkPlugins: [remarkGfm],
@@ -43,10 +36,16 @@ export default defineConfig({
     remarkRehype: {
       footnoteLabel: "脚注"
     }
-  }
+  },
+
+  // Vite設定（統合版）
   vite: {
+    // esbuildのターゲットを指定
+    esbuild: {
+      target: 'es2020'
+    },
+    // 環境変数の明示的な定義
     define: {
-      // 必要に応じて環境変数を明示的に定義
       'import.meta.env.PUBLIC_EMAILJS_SERVICE_ID': JSON.stringify(process.env.PUBLIC_EMAILJS_SERVICE_ID),
       'import.meta.env.PUBLIC_EMAILJS_TEMPLATE_ID': JSON.stringify(process.env.PUBLIC_EMAILJS_TEMPLATE_ID),
       'import.meta.env.PUBLIC_EMAILJS_PUBLIC_KEY': JSON.stringify(process.env.PUBLIC_EMAILJS_PUBLIC_KEY),
