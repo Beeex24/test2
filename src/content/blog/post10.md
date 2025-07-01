@@ -2,7 +2,8 @@
 title: '【サマーセール】【史上最安】Sons of the Forest が66%OFFの大セール中！今が買い時のサバイバルホラーゲーム'
 description: 'Steamで話題のサバイバルホラーゲーム「Sons of the Forest」が史上最安値の66%OFFセール実施中！The Forestの続編として注目を集める本作の魅力と現在のセール情報を詳しく解説します。'
 pubDate: 'June 28 2025'
-heroImage: '/sale/forest1.png'
+heroImage: '/sale/forest.png'
+category: 'SALE'
 ---
 
 ## 🎯 Sons of the Forest 史上最安値セール開催中！

@@ -7,12 +7,10 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://example.com',
+  site: 'https://anygames.mods.jp',
   integrations: [mdx(), sitemap()],
+  
 
-
-  site: 'https://test2-5ws.pages.dev',
-  adapter: cloudflare(),
 
   // TypeScript設定を追加
   typescript: {
@@ -22,6 +20,10 @@ export default defineConfig({
   },
   // Vite設定でesbuildのターゲットを指定
   vite: {
+    define: {
+      'import.meta.env.VITE_API_KEY': JSON.stringify(process.env.VITE_API_KEY)
+    },
+
     esbuild: {
       target: 'es2020'
     }

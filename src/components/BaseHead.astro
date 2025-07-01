@@ -30,10 +30,12 @@ const {
 	tags = []
 } = Astro.props;
 
+const siteUrl = Astro.site?.toString() || `${Astro.url.protocol}//${Astro.url.host}`;
+
 // OGP用の画像URL（絶対URLに変換、フォールバック画像設定）
 const ogImage = image ? 
-	new URL(image, Astro.site || Astro.url.origin).href : 
-	new URL('/placeholder-image.jpg', Astro.site || Astro.url.origin).href;
+	new URL(image, siteUrl).href : 
+	new URL('/placeholder-image.jpg', siteUrl).href;
 ---
 
 <!-- Global Metadata -->

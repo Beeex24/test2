@@ -19,11 +19,15 @@ const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
+const siteUrl = Astro.site?.toString() || `${Astro.url.protocol}//${Astro.url.host}`;
+
 // Markdown本文をHTMLとして描画
 const { Content } = await render(post);
 
 // OGP用の画像URL（絶対URLに変換）
-const ogImage = heroImage ? new URL(heroImage, Astro.site || Astro.url.origin).href : new URL('/placeholder-image.jpg', Astro.site || Astro.url.origin).href;
+const ogImage = heroImage 
+  ? (heroImage.startsWith('http') ? heroImage : `${siteUrl}${heroImage.startsWith('/') ? '' : '/'}${heroImage}`)
+  : `${siteUrl}/placeholder-image.jpg`;
 
 // 現在のページURL
 const canonicalURL = new URL(Astro.url.pathname, Astro.site || Astro.url.origin).href;
