@@ -14,9 +14,8 @@ import { SITE_TITLE } from '../consts';
             <HeaderLink href="/">ホーム</HeaderLink>
             <HeaderLink href="/blog">投稿記事</HeaderLink>
             <HeaderLink href="/device">デバイス一覧</HeaderLink>
-
             <HeaderLink href="/Link">リンク</HeaderLink>
-            <HeaderLink href="/terms">利用規約</HeaderLink>
+            <HeaderLink href="/infosite">サイトについて</HeaderLink>
             <HeaderLink href="/about">お問い合わせ</HeaderLink>
             
         </div>
@@ -24,7 +23,8 @@ import { SITE_TITLE } from '../consts';
 </header>
 
 <script>
-    window.toggleMenu = function () {
+    // TypeScript型エラー回避のためanyとして扱う
+    (window as any).toggleMenu = function () {
         const menu = document.querySelector('.internal-links');
         if (menu) {
             menu.classList.toggle('active');
@@ -197,4 +197,4 @@ import { SITE_TITLE } from '../consts';
         .menu-toggle {
         margin-left: auto; /* ハンバーガーメニューを右端に配置 */
     }
-    </style>
+</style>

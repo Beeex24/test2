@@ -31,37 +31,53 @@ const allPosts = [...posts, ...devicePosts].sort(
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        new Swiper(".swiper-container", {
-          loop: true, // ループを有効化
-          autoplay: {
-            delay: 4000, // スライド間隔
-            disableOnInteraction: false, // ユーザー操作後も自動再生を継続
-          },
-          speed: 800, // アニメーション速度
-          navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-          },
-          pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-          },
-          slidesPerView: 1, // デフォルトで1スライドを表示
-          spaceBetween: 20, // スライド間の余白
-          breakpoints: {
-            768: {
-              slidesPerView: 2, // 中画面では2スライドを表示
+        // Swiperライブラリが読み込まれるまで待機
+        function initSwiper() {
+          // TypeScript型エラー回避のためanyとして扱う
+          const SwiperClass = (window as any).Swiper;
+          if (typeof SwiperClass !== 'undefined') {
+            new SwiperClass(".swiper-container", {
+              loop: true, // ループを有効化
+              autoplay: {
+                delay: 4000, // スライド間隔
+                disableOnInteraction: false, // ユーザー操作後も自動再生を継続
+              },
+              speed: 800, // アニメーション速度
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+              },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              slidesPerView: 1, // デフォルトで1スライドを表示
               spaceBetween: 20, // スライド間の余白
-            },
-            1024: {
-              slidesPerView: 5, // 大画面では3スライドを表示
-              spaceBetween: 30, // スライド間の余白
-            },
-          },
-        });
+              breakpoints: {
+                768: {
+                  slidesPerView: 2, // 中画面では2スライドを表示
+                  spaceBetween: 20, // スライド間の余白
+                },
+                1024: {
+                  slidesPerView: 5, // 大画面では3スライドを表示
+                  spaceBetween: 30, // スライド間の余白
+                },
+              },
+            });
+          } else {
+            // Swiperがまだ読み込まれていない場合、少し待ってから再試行
+            setTimeout(initSwiper, 100);
+          }
+        }
+        
+        initSwiper();
       });
     </script>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead 
+      title={SITE_TITLE} 
+      description={SITE_DESCRIPTION} 
+      image="/placeholder-image.jpg"
+    />
     <style>
       /* スライダーセクションのスタイル */
       .blog-slider-section {
@@ -330,6 +346,10 @@ const allPosts = [...posts, ...devicePosts].sort(
   </style>
 
   <!-- 上部右側ディスプレイ広告 -->
+   <head>
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4929223237591717"
+     crossorigin="anonymous"></script>
+  </head>
 
   <body>
     <Header />

@@ -2,7 +2,7 @@
 title: '【MINECRAFT】Minecraft最新アップデート「Chase the Skies」と「Vibrant Visuals」が配信開始！飛行マウントとグラフィック刷新で空の冒険が始まる'
 description: 'Minecraft最新アップデート「Chase the Skies」でハッピーガストに乗って空を飛び、「Vibrant Visuals」で美しくなったグラフィックを楽しもう。新機能の詳細と対応デバイスを徹底解説！'
 pubDate: 'June 27 2025'
-heroImage: '/minecraft/maikura1.png'
+heroImage: '/minecraft/maikura.png'
 category: 'MINECRAFT'
 ---
 

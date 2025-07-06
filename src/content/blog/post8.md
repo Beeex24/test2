@@ -1,5 +1,5 @@
 ---
-title: '【サマーセール】Escape the Backrooms が20%オフ！恐怖のバックルームを仲間と攻略しよう'
+title: '【Steam夏セール2025】Escape the Backrooms が20%オフ！恐怖のバックルームを仲間と攻略しよう'
 description: 'Steamで話題のホラーゲーム「Escape the Backrooms」が現在20%オフセール中！最大4人での協力プレイが楽しめる、バックルーム脱出ホラーゲームの魅力とセール情報を詳しく解説します。'
 pubDate: 'June 28 2025'
 heroImage: '/sale/backroom.png'

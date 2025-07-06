@@ -1,5 +1,5 @@
 ---
-title: '【サマーセール】今年の夏は7 Days to Die が熱い！サバイバルゲームの決定版がSteamで話題に'
+title: '【Steam夏セール2025】今年の夏は7 Days to Die が熱い！サバイバルゲームの決定版がSteamで話題に'
 description: '2000万本以上売り上げた人気サバイバルゲーム「7 Days to Die」の最新価格情報とお得な購入方法をご紹介！ゾンビサバイバルの原点とも言える名作ゲームを安く手に入れよう'
 pubDate: 'June 28 2025'
 heroImage: '/sale/days1.png'

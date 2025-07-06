@@ -51,19 +51,31 @@ import slide06 from '/public/blog-placeholder-5.jpg'
 
 <script>
   document.addEventListener('DOMContentLoaded', function () {
-    new Swiper('.swiper', {
-      loop: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      scrollbar: {
-        el: '.swiper-scrollbar',
-      },
-    });
+    // Swiperライブラリが読み込まれるまで待機
+    function initSwiper() {
+      // TypeScript型エラー回避のためanyとして扱う
+      const SwiperClass = (window as any).Swiper;
+      if (typeof SwiperClass !== 'undefined') {
+        new SwiperClass('.swiper', {
+          loop: true,
+          pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+          },
+          navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          },
+          scrollbar: {
+            el: '.swiper-scrollbar',
+          },
+        });
+      } else {
+        // Swiperがまだ読み込まれていない場合、少し待ってから再試行
+        setTimeout(initSwiper, 100);
+      }
+    }
+    
+    initSwiper();
   });
 </script>
