@@ -7,7 +7,7 @@ import cloudflare from '@astrojs/cloudflare';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://anygames.mods.jp',
+  site: 'https://anygamesjp.com',
   integrations: [mdx(), sitemap()],
   
 

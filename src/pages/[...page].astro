@@ -93,176 +93,21 @@ export const prerender = true;
         initSwiper();
       });
     </script>
-    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <BaseHead 
+      title={SITE_TITLE} 
+      description={SITE_DESCRIPTION} 
+      image="/placeholder-image.jpg"
+    />
     <style>
-      /* アフィリエイトセクションのスタイル */
-      .affiliate-section {
-        padding: 2rem;
-        background-color: #f9f9f9;
-        border-radius: 8px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin: 2rem 0;
-      }
-
-      .affiliate-section h2 {
-        font-size: 1.8rem;
-        margin-bottom: 1rem;
-        color: #333;
-      }
-
-      .affiliate-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 1.5rem;
-      }
-
-      .affiliate-card {
-        background: #fff;
-        border: 1px solid #ddd;
-        border-radius: 8px;
-        padding: 1rem;
-        text-align: center;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        transition:
-          transform 0.2s ease,
-          box-shadow 0.2s ease;
-      }
-
-      .affiliate-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-      }
-
-      .affiliate-card img {
-        width: 100%;
-        height: auto;
-        border-radius: 4px;
-        margin-bottom: 1rem;
-      }
-
-      .affiliate-card h3 {
-        font-size: 1.2rem;
-        margin-bottom: 0.5rem;
-        color: #333;
-      }
-
-      .affiliate-card p {
-        font-size: 0.9rem;
-        color: #666;
-        margin-bottom: 1rem;
-      }
-
-      .affiliate-card .price {
-        font-size: 1.2rem;
-        font-weight: bold;
-        color: #e60023;
-        margin-bottom: 1rem;
-      }
-
-      .affiliate-card a {
-        display: inline-block;
-        padding: 0.5rem 1rem;
-        background-color: #ff9900;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 4px;
-        font-weight: bold;
-        transition: background-color 0.2s ease;
-      }
-
-      .affiliate-card a:hover {
-        background-color: #cc7a00;
-      }
-
-      /* ブログセクションのスタイル */
-      .blog-section {
-        padding: 2rem;
-        max-width: 1200px; /* セクションの幅を調整 1200px(横3個のコンテンツ) or 800px(横2個のコンテンツ) */
-        margin: 2rem 0; /* 上下の余白 */
-        margin-left: -24rem; /* 左寄せ */
-      }
-
-      .blog-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-        gap: 2rem;
-      }
-
-      .blog-card {
-        background: #fff;
-        border-radius: 12px;
-        overflow: hidden;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        transition:
-          transform 0.3s ease,
-          box-shadow 0.3s ease;
-        text-decoration: none;
-        color: inherit;
-      }
-
-      .blog-card:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-      }
-
-      .blog-card img {
-        width: 100%;
-        height: 180px;
-        object-fit: cover;
-      }
-
-      .blog-card-content {
-        padding: 1.5rem;
-      }
-
-      .blog-card-title {
-        font-size: 1.4rem;
-        font-weight: bold;
-        margin-bottom: 0.5rem;
-        color: #222;
-      }
-
-      .blog-card-description {
-        font-size: 1rem;
-        color: #555;
-        margin-bottom: 1rem;
-        line-height: 1.4;
-      }
-
-      .blog-card-date {
-        font-size: 0.9rem;
-        color: #888;
-        text-align: right;
-      }
-
-      /* レスポンシブ対応 */
-      @media (max-width: 768px) {
-        .blog-card img {
-          height: 150px;
-        }
-
-        .blog-card-title {
-          font-size: 1.2rem;
-        }
-
-        .blog-card-description {
-          font-size: 0.9rem;
-        }
-      }
-
       /* スライダーセクションのスタイル */
       .blog-slider-section {
         padding: 2rem;
         background-color: #f9f9f9;
         border-radius: 8px;
-        margin: 2rem 0;
+        margin: 3.5rem auto;
         max-width: 100vw;
         width: 100vw;
         position: relative;
-        left: 50%;
-        right: 50%;
-        margin-left: -20vw;
-        margin-right: -20vw;
         box-sizing: border-box;
       }
 
@@ -313,12 +158,14 @@ export const prerender = true;
         text-decoration: none;
         color: inherit;
         margin: 0 10px;
-        transition: box-shadow 0.3s, transform 0.3s;
+        transition:
+          box-shadow 0.3s,
+          transform 0.3s;
       }
 
       .blog-card:hover {
         transform: translateY(-10px) scale(1.03);
-        box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
       }
 
       .blog-card img {
@@ -353,7 +200,7 @@ export const prerender = true;
       /* Swiperナビゲーションボタンのカスタマイズ */
       .swiper-button-next,
       .swiper-button-prev {
-        background: rgba(0,0,0,.6);
+        background: rgba(0, 0, 0, 0.6);
         color: #fff;
         cursor: pointer;
         height: 48px;
@@ -383,7 +230,7 @@ export const prerender = true;
       }
       .swiper-button-next:hover,
       .swiper-button-prev:hover {
-        background: rgba(0,0,0,0.85);
+        background: rgba(0, 0, 0, 0.85);
       }
 
       /* Swiperページネーション */
@@ -414,9 +261,6 @@ export const prerender = true;
         .blog-slider-section {
           max-width: 100vw;
           width: 100vw;
-          margin-left: -50vw;
-          left: 50%;
-          right: 50%;
         }
         .swiper-container {
           max-width: 98vw;
@@ -424,12 +268,10 @@ export const prerender = true;
       }
       @media (max-width: 768px) {
         .blog-slider-section {
-          padding: 1rem 0.2rem;
+          padding: 1rem 0.5rem;
+          margin: 2rem 0;
           max-width: 100vw;
           width: 100vw;
-          margin-left: -50vw;
-          left: 50%;
-          right: 50%;
         }
         .swiper-container {
           max-width: 100vw;
@@ -511,42 +353,26 @@ export const prerender = true;
       .ad-top-right {
         display: none; /* モバイル画面では非表示 */
       }
+    
+      {
+        box-sizing: border-box;
+      }
+      html, body {
+        overflow-x: hidden !important;
+        width: 100% !important;
+        max-width: 100vw !important;
+      }
     }
   </style>
 
   <!-- 上部右側ディスプレイ広告 -->
+   <head>
+   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4929223237591717"
+     crossorigin="anonymous"></script>
+  </head>
 
   <body>
     <Header />
-    <div class="ad-top-right">
-      <a
-        href="https://www.example.com"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        <img src="https://via.placeholder.com/300x250" alt="ディスプレイ広告" />
-      </a>
-    </div>
-
-    <style>
-      .ad-top-right {
-        position: absolute;
-        top: 10rem;
-        right: 50rem;
-        z-index: 1000; /* ヘッダーや他の要素より前面に表示 */
-      }
-
-      .ad-top-right img {
-        width: 300px;
-        height: 250px;
-        border: none;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      }
-    </style>
-
-    
-
-    <!-- filepath: d:\ProgramData\vsc\UNCHI\smoggy-series\src\pages\index.astro -->
     <!-- サイド広告セクション -->
 
     <div class="side-ads">
@@ -636,7 +462,7 @@ export const prerender = true;
         color: white;
         text-align: center;
         padding: 0.5rem 1rem;
-        font-size: 1rem;
+        font-size: 1.5rem;
         font-weight: bold;
         position: sticky;
         top: 0;
@@ -663,7 +489,7 @@ export const prerender = true;
         <div class="swiper-container">
           <div class="swiper-wrapper">
             {
-               allPosts.map((post) => (
+              allPosts.slice(0, 10).map((post) => (
                 <div class="swiper-slide">
                   <a href={`/${post.collection}/${post.id}/`} class="blog-card">
                     <img src={post.data.heroImage} alt={post.data.title} />
@@ -689,598 +515,712 @@ export const prerender = true;
         </div>
       </section>
 
-<html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>タブ付き記事リスト</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+      <!-- ページ中央　タブリスト表示 -->
 
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-            padding: 2rem;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            background: rgba(255, 255, 255, 0.95);
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
-            backdrop-filter: blur(10px);
-        }
-
-        .tab-header {
-            display: flex;
-            background: linear-gradient(135deg, #2c3e50, #3498db);
-            position: relative;
-            overflow: hidden;
-        }
-
-        .tab-header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(45deg, transparent 30%, rgba(255,255,255,0.1) 50%, transparent 70%);
-            animation: shimmer 3s infinite;
-        }
-
-        @keyframes shimmer {
-            0% { transform: translateX(-100%); }
-            100% { transform: translateX(200%); }
-        }
-
-        .tab-button {
-            flex: 1;
-            padding: 1.5rem 2rem;
-            background: none;
-            border: none;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 1.1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            z-index: 2;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .tab-button:hover {
-            color: rgba(255, 255, 255, 0.9);
-            transform: translateY(-2px);
-        }
-
-        .tab-button.active {
-            color: #fff;
-            background: rgba(255, 255, 255, 0.2);
-            backdrop-filter: blur(10px);
-        }
-
-        .tab-button.active::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 50%;
-            width: 50px;
-            height: 3px;
-            background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
-            transform: translateX(-50%);
-            border-radius: 2px;
-        }
-
-        .tab-content {
-            padding: 2rem;
-            min-height: 600px;
-        }
-
-        .article-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-        }
-
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
+      <html lang="ja">
+        <head>
+          <meta charset="UTF-8" />
+          <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+          />
+          <title>タブ付き記事リスト</title>
+          <style>
+            * {
+              margin: 0;
+              padding: 0;
+              box-sizing: border-box;
             }
-        }
 
-        .article-card {
-            background: #fff;
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            cursor: pointer;
-        }
-
-        .article-card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: linear-gradient(135deg, rgba(255,107,107,0.1), rgba(78,205,196,0.1));
-            opacity: 0;
-            transition: opacity 0.3s ease;
-        }
-
-        .article-card:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
-        }
-
-        .article-card:hover::before {
-            opacity: 1;
-        }
-
-        .article-image {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            transition: transform 0.6s ease;
-        }
-
-        .article-card:hover .article-image {
-            transform: scale(1.1);
-        }
-
-        .article-content {
-            padding: 1.5rem;
-            position: relative;
-            z-index: 2;
-        }
-
-        .article-category {
-            display: inline-block;
-            padding: 0.3rem 0.8rem;
-            background: linear-gradient(135deg, #ff6b6b, #ee5a24);
-            color: white;
-            font-size: 0.8rem;
-            font-weight: 600;
-            border-radius: 20px;
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .article-title {
-            font-size: 1.3rem;
-            font-weight: 700;
-            color: #2c3e50;
-            margin-bottom: 0.8rem;
-            line-height: 1.4;
-            transition: color 0.3s ease;
-        }
-
-        .article-card:hover .article-title {
-            color: #3498db;
-        }
-
-        .article-description {
-            color: #7f8c8d;
-            font-size: 0.95rem;
-            line-height: 1.6;
-            margin-bottom: 1rem;
-        }
-
-        .article-meta {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            color: #95a5a6;
-            font-size: 0.85rem;
-        }
-
-        .article-date {
-            font-weight: 600;
-        }
-
-        .read-more {
-            background: linear-gradient(135deg, #3498db, #2980b9);
-            color: white;
-            padding: 0.5rem 1rem;
-            border-radius: 20px;
-            text-decoration: none;
-            font-size: 0.8rem;
-            font-weight: 600;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .read-more:hover {
-            background: linear-gradient(135deg, #2980b9, #3498db);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
-        }
-
-        .tab-panel {
-            display: none;
-            animation: slideIn 0.5s ease forwards;
-        }
-
-        .tab-panel.active {
-            display: block;
-        }
-
-        @keyframes slideIn {
-            from {
-                opacity: 0;
-                transform: translateX(20px);
+            body {
+              font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+              background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+              min-height: 100vh;
+              padding: 2rem;
             }
-            to {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
 
-        .empty-state {
-            text-align: center;
-            padding: 4rem 2rem;
-            color: #7f8c8d;
-        }
-
-        .empty-state h3 {
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
-            color: #95a5a6;
-        }
-
-        @media (max-width: 768px) {
             .container {
-                margin: 1rem;
-                border-radius: 15px;
+              max-width: 1200px;
+              margin: 0 auto;
+              background: rgba(255, 255, 255, 0.95);
+              border-radius: 20px;
+              overflow: hidden;
+              box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+              backdrop-filter: blur(10px);
+            }
+
+            .tab-header {
+              display: flex;
+              background: linear-gradient(135deg, #2c3e50, #3498db);
+              position: relative;
+              overflow: hidden;
+            }
+
+            .tab-header::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: linear-gradient(
+                45deg,
+                transparent 30%,
+                rgba(255, 255, 255, 0.1) 50%,
+                transparent 70%
+              );
+              animation: shimmer 3s infinite;
+            }
+
+            @keyframes shimmer {
+              0% {
+                transform: translateX(-100%);
+              }
+              100% {
+                transform: translateX(200%);
+              }
             }
 
             .tab-button {
-                padding: 1rem;
-                font-size: 0.9rem;
+              flex: 1;
+              padding: 1.5rem 2rem;
+              background: none;
+              border: none;
+              color: rgba(255, 255, 255, 0.7);
+              font-size: 1.1rem;
+              font-weight: 600;
+              cursor: pointer;
+              transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+              position: relative;
+              z-index: 2;
+              text-transform: uppercase;
+              letter-spacing: 1px;
+            }
+
+            .tab-button:hover {
+              color: rgba(255, 255, 255, 0.9);
+              transform: translateY(-2px);
+            }
+
+            .tab-button.active {
+              color: #fff;
+              background: rgba(255, 255, 255, 0.2);
+              backdrop-filter: blur(10px);
+            }
+
+            .tab-button.active::after {
+              content: "";
+              position: absolute;
+              bottom: 0;
+              left: 50%;
+              width: 50px;
+              height: 3px;
+              background: linear-gradient(90deg, #ff6b6b, #4ecdc4);
+              transform: translateX(-50%);
+              border-radius: 2px;
             }
 
             .tab-content {
-                padding: 1rem;
+              padding: 2rem;
+              min-height: 600px;
             }
 
             .article-grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
+              display: grid;
+              grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+              gap: 2rem;
+              opacity: 0;
+              transform: translateY(20px);
+              animation: fadeInUp 0.6s ease forwards;
+            }
+
+            @keyframes fadeInUp {
+              to {
+                opacity: 1;
+                transform: translateY(0);
+              }
             }
 
             .article-card {
-                border-radius: 12px;
+              background: #fff;
+              border-radius: 16px;
+              overflow: hidden;
+              box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+              transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+              position: relative;
+              cursor: pointer;
+            }
+
+            .article-card::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: linear-gradient(
+                135deg,
+                rgba(255, 107, 107, 0.1),
+                rgba(78, 205, 196, 0.1)
+              );
+              opacity: 0;
+              transition: opacity 0.3s ease;
+            }
+
+            .article-card:hover {
+              transform: translateY(-10px) scale(1.02);
+              box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
+            }
+
+            .article-card:hover::before {
+              opacity: 1;
             }
 
             .article-image {
-                height: 160px;
+              width: 100%;
+              height: 200px;
+              object-fit: cover;
+              transition: transform 0.6s ease;
+            }
+
+            .article-card:hover .article-image {
+              transform: scale(1.1);
             }
 
             .article-content {
-                padding: 1rem;
+              padding: 1.5rem;
+              position: relative;
+              z-index: 2;
+            }
+
+            .article-category {
+              display: inline-block;
+              padding: 0.3rem 0.8rem;
+              background: linear-gradient(135deg, #ff6b6b, #ee5a24);
+              color: white;
+              font-size: 0.8rem;
+              font-weight: 600;
+              border-radius: 20px;
+              margin-bottom: 1rem;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
             }
 
             .article-title {
-                font-size: 1.1rem;
+              font-size: 1.3rem;
+              font-weight: 700;
+              color: #2c3e50;
+              margin-bottom: 0.8rem;
+              line-height: 1.4;
+              transition: color 0.3s ease;
             }
-        }
-    </style>
-</head>
-<body>
-      <!-- タブ付き記事リストここから -->
-      <div class="container" style="margin-top:3rem;">
-        <div class="tab-header">
-            <button class="tab-button active" data-tab="all">すべての記事</button>
-            <button class="tab-button" data-tab="blog">ブログ記事</button>
-            <button class="tab-button" data-tab="device">デバイス記事</button>
-            <button class="tab-button" data-tab="news">ニュース</button>
-        </div>
 
-        <div class="tab-content">
-            <!-- すべての記事タブ -->
-            <div class="tab-panel active" id="all">
-                <div class="article-grid">
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=200&fit=crop" alt="ゲーミング記事" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">ゲーミング</span>
-                            <h3 class="article-title">最新ゲーミングマウスの選び方とおすすめ10選</h3>
-                            <p class="article-description">プロゲーマーも愛用する高性能ゲーミングマウスの特徴と、用途別のおすすめモデルを詳しく解説します。</p>
-                            <div class="article-meta">
-                                <span class="article-date">2025年6月15日</span>
-                                <a href="#" class="read-more">続きを読む</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop" alt="キーボード記事" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">レビュー</span>
-                            <h3 class="article-title">メカニカルキーボード徹底比較レビュー</h3>
-                            <p class="article-description">人気のメカニカルキーボード5機種を実際に使用して、打鍵感やゲーミング性能を比較しました。</p>
-                            <div class="article-meta">
-                                <span class="article-date">2025年6月12日</span>
-                                <a href="#" class="read-more">続きを読む</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=400&h=200&fit=crop" alt="モニター記事" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">ニュース</span>
-                            <h3 class="article-title">240Hzゲーミングモニターの新製品情報</h3>
-                            <p class="article-description">各メーカーから発表された最新の240Hz対応ゲーミングモニターの特徴と価格情報をまとめました。</p>
-                            <div class="article-meta">
-                                <span class="article-date">2025年6月10日</span>
-                                <a href="#" class="read-more">続きを読む</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=200&fit=crop" alt="セットアップ記事" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">ハウツー</span>
-                            <h3 class="article-title">プロゲーマー流デスクセットアップ術</h3>
-                            <p class="article-description">効率的で快適なゲーミング環境を構築するためのデスクレイアウトとアイテム配置のコツを紹介。</p>
-                            <div class="article-meta">
-                                <span class="article-date">2025年6月8日</span>
-                                <a href="#" class="read-more">続きを読む</a>
-                            </div>
-                        </div>
-                    </article>
-                </div>
+            .article-card:hover .article-title {
+              color: #3498db;
+            }
+
+            .article-description {
+              color: #7f8c8d;
+              font-size: 0.95rem;
+              line-height: 1.6;
+              margin-bottom: 1rem;
+            }
+
+            .article-meta {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              color: #95a5a6;
+              font-size: 0.85rem;
+            }
+
+            .article-date {
+              font-weight: 600;
+            }
+
+            .article-card-link {
+              text-decoration: none;
+              color: inherit;
+              display: block;
+              transition: transform 0.3s ease;
+            }
+
+            .article-card-link:hover {
+              transform: translateY(-10px);
+            }
+
+            .read-more {
+              background: linear-gradient(135deg, #3498db, #2980b9);
+              color: white;
+              padding: 0.5rem 1rem;
+              border-radius: 20px;
+              text-decoration: none;
+              font-size: 0.8rem;
+              font-weight: 600;
+              transition: all 0.3s ease;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+            }
+
+            .read-more:hover {
+              background: linear-gradient(135deg, #2980b9, #3498db);
+              transform: translateY(-2px);
+              box-shadow: 0 5px 15px rgba(52, 152, 219, 0.4);
+            }
+
+            .tab-panel {
+              display: none;
+              animation: slideIn 0.5s ease forwards;
+            }
+
+            .tab-panel.active {
+              display: block;
+            }
+
+            @keyframes slideIn {
+              from {
+                opacity: 0;
+                transform: translateX(20px);
+              }
+              to {
+                opacity: 1;
+                transform: translateX(0);
+              }
+            }
+
+            .empty-state {
+              text-align: center;
+              padding: 4rem 2rem;
+              color: #7f8c8d;
+            }
+
+            .empty-state h3 {
+              font-size: 1.5rem;
+              margin-bottom: 1rem;
+              color: #95a5a6;
+            }
+
+            .tab-section {
+              margin-bottom: 2rem;
+              text-align: center;
+            }
+
+            .tab-section h1 {
+              color: white;
+              margin-bottom: 1rem;
+              font-size: 2rem;
+            }
+
+            .tab-list {
+              display: flex;
+              justify-content: center;
+              gap: 1rem;
+              list-style: none;
+              margin-bottom: 2rem;
+            }
+
+            .tab-item {
+              padding: 0.5rem 1rem;
+              background: rgba(255, 255, 255, 0.2);
+              color: white;
+              border-radius: 10px;
+              cursor: pointer;
+              transition: all 0.3s ease;
+            }
+
+            .tab-item.active {
+              background: rgba(255, 255, 255, 0.3);
+            }
+
+            @media (max-width: 768px) {
+              .container {
+                margin: 1rem;
+                border-radius: 15px;
+              }
+
+              .tab-button {
+                padding: 1rem;
+                font-size: 0.9rem;
+              }
+
+              .tab-content {
+                padding: 1rem;
+              }
+
+              .article-grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+              }
+
+              .article-card {
+                border-radius: 12px;
+              }
+
+              .article-image {
+                height: 160px;
+              }
+
+              .article-content {
+                padding: 1rem;
+              }
+
+              .article-title {
+                font-size: 1.1rem;
+              }
+
+              .tab-list {
+                flex-direction: column;
+                align-items: center;
+              }
+              .tab-section {
+                display: none;
+              }
+            }
+          </style>
+        </head>
+
+        <body>
+          <!-- ページ中央　タブリスト表示 -->
+          <section class="tab-section">
+            <h1>記事一覧</h1>
+            <ul class="tab-list">
+              <li class="tab-item active" data-tab="all">最新記事</li>
+              <li class="tab-item" data-tab="blog">ブログ記事</li>
+              <li class="tab-item" data-tab="device">デバイス記事</li>
+            </ul>
+          </section>
+
+          <div class="container">
+            <div class="tab-header">
+              <button class="tab-button active" data-tab="all"
+                >すべての記事</button
+              >
+              <button class="tab-button" data-tab="blog">ブログ記事</button>
+              <button class="tab-button" data-tab="device">デバイス記事</button>
+              <button class="tab-button" data-tab="news">ニュース</button>
             </div>
-            <!-- ブログ記事タブ -->
-            <div class="tab-panel" id="blog">
+
+            <div class="tab-content">
+              <!-- すべての記事タブ -->
+
+              <div class="tab-panel active" id="all">
                 <div class="article-grid">
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1493711662062-fa541adb3fc8?w=400&h=200&fit=crop" alt="ゲーム攻略" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">攻略</span>
-                            <h3 class="article-title">Apex Legends最新シーズン攻略ガイド</h3>
-                            <p class="article-description">新マップの立ち回りや最強武器構成、ランクマッチで勝利するための戦術を詳しく解説します。</p>
+                  {
+                    allPosts.map((post) => (
+                      <a
+                        href={`/${post.collection}/${post.id}/`}
+                        class="article-card-link"
+                      >
+                        <article class="article-card">
+                          <img
+                            src={post.data.heroImage}
+                            alt={post.data.title}
+                            class="article-image"
+                          />
+                          <div class="article-content">
+                            <span class="article-category">
+                              {post.collection}
+                            </span>
+                            <h3 class="article-title">{post.data.title}</h3>
+                            <p class="article-description">
+                              {post.data.description}
+                            </p>
                             <div class="article-meta">
-                                <span class="article-date">2025年6月14日</span>
-                                <a href="#" class="read-more">続きを読む</a>
+                              <span class="article-date">
+                                <FormattedDate date={post.data.pubDate} />
+                              </span>
+                              <span class="read-more">続きを読む</span>
                             </div>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?w=400&h=200&fit=crop" alt="セットアップ記事" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">ハウツー</span>
-                            <h3 class="article-title">プロゲーマー流デスクセットアップ術</h3>
-                            <p class="article-description">効率的で快適なゲーミング環境を構築するためのデスクレイアウトとアイテム配置のコツを紹介。</p>
-                            <div class="article-meta">
-                                <span class="article-date">2025年6月8日</span>
-                                <a href="#" class="read-more">続きを読む</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1606144042614-b2417e99c4e3?w=400&h=200&fit=crop" alt="ゲーム体験記" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">体験記</span>
-                            <h3 class="article-title">FPSゲームで上達するための練習方法</h3>
-                            <p class="article-description">エイム練習からポジショニングまで、FPSゲームのスキルアップに効果的な練習メニューを紹介。</p>
-                            <div class="article-meta">
-                                <span class="article-date">2025年6月5日</span>
-                                <a href="#" class="read-more">続きを読む</a>
-                            </div>
-                        </div>
-                    </article>
+                          </div>
+                        </article>
+                      </a>
+                    ))
+                  }
                 </div>
-            </div>
-            <!-- デバイス記事タブ -->
-            <div class="tab-panel" id="device">
+              </div>
+
+              <!-- ブログ記事タブ -->
+              <div class="tab-panel" id="blog">
                 <div class="article-grid">
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=400&h=200&fit=crop" alt="ゲーミングマウス" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">ゲーミング</span>
-                            <h3 class="article-title">最新ゲーミングマウスの選び方とおすすめ10選</h3>
-                            <p class="article-description">プロゲーマーも愛用する高性能ゲーミングマウスの特徴と、用途別のおすすめモデルを詳しく解説します。</p>
+                  {
+                    posts.map((post) => (
+                      <a href={`/blog/${post.id}/`} class="article-card-link">
+                        <article class="article-card">
+                          <img
+                            src={post.data.heroImage}
+                            alt={post.data.title}
+                            class="article-image"
+                          />
+                          <div class="article-content">
+                            <span class="article-category">ブログ</span>
+                            <h3 class="article-title">{post.data.title}</h3>
+                            <p class="article-description">
+                              {post.data.description}
+                            </p>
                             <div class="article-meta">
-                                <span class="article-date">2025年6月15日</span>
-                                <a href="#" class="read-more">続きを読む</a>
+                              <span class="article-date">
+                                <FormattedDate date={post.data.pubDate} />
+                              </span>
+                              <span class="read-more">続きを読む</span>
                             </div>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=400&h=200&fit=crop" alt="キーボード" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">レビュー</span>
-                            <h3 class="article-title">メカニカルキーボード徹底比較レビュー</h3>
-                            <p class="article-description">人気のメカニカルキーボード5機種を実際に使用して、打鍵感やゲーミング性能を比較しました。</p>
-                            <div class="article-meta">
-                                <span class="article-date">2025年6月12日</span>
-                                <a href="#" class="read-more">続きを読む</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=400&h=200&fit=crop" alt="ヘッドセット" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">レビュー</span>
-                            <h3 class="article-title">ゲーミングヘッドセット音質テスト</h3>
-                            <p class="article-description">足音の聞き取りやすさを重視したゲーミングヘッドセットの音質を専門機器で測定・比較しました。</p>
-                            <div class="article-meta">
-                                <span class="article-date">2025年6月7日</span>
-                                <a href="#" class="read-more">続きを読む</a>
-                            </div>
-                        </div>
-                    </article>
+                          </div>
+                        </article>
+                      </a>
+                    ))
+                  }
                 </div>
-            </div>
-            <!-- ニュースタブ -->
-            <div class="tab-panel" id="news">
+              </div>
+
+              <!-- デバイス記事タブ -->
+              <div class="tab-panel" id="device">
                 <div class="article-grid">
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1593305841991-05c297ba4575?w=400&h=200&fit=crop" alt="モニター記事" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">ニュース</span>
-                            <h3 class="article-title">240Hzゲーミングモニターの新製品情報</h3>
-                            <p class="article-description">各メーカーから発表された最新の240Hz対応ゲーミングモニターの特徴と価格情報をまとめました。</p>
+                  {
+                    devicePosts.map((post) => (
+                      <a href={`/device/${post.id}/`} class="article-card-link">
+                        <article class="article-card">
+                          <img
+                            src={post.data.heroImage}
+                            alt={post.data.title}
+                            class="article-image"
+                          />
+                          <div class="article-content">
+                            <span class="article-category">デバイス</span>
+                            <h3 class="article-title">{post.data.title}</h3>
+                            <p class="article-description">
+                              {post.data.description}
+                            </p>
                             <div class="article-meta">
-                                <span class="article-date">2025年6月10日</span>
-                                <a href="#" class="read-more">続きを読む</a>
+                              <span class="article-date">
+                                <FormattedDate date={post.data.pubDate} />
+                              </span>
+                              <span class="read-more">続きを読む</span>
                             </div>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1556438064-2d7646166914?w=400&h=200&fit=crop" alt="eスポーツニュース" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">eスポーツ</span>
-                            <h3 class="article-title">世界大会の最新結果とメタ分析</h3>
-                            <p class="article-description">先週開催された国際大会の結果と、プロシーンで流行している戦術・キャラクター構成を分析。</p>
-                            <div class="article-meta">
-                                <span class="article-date">2025年6月9日</span>
-                                <a href="#" class="read-more">続きを読む</a>
-                            </div>
-                        </div>
-                    </article>
-                    <article class="article-card">
-                        <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=400&h=200&fit=crop" alt="技術ニュース" class="article-image">
-                        <div class="article-content">
-                            <span class="article-category">テクノロジー</span>
-                            <h3 class="article-title">次世代GPU発表！ゲーミング性能は？</h3>
-                            <p class="article-description">各社から発表された次世代GPUのスペック比較と、ゲーミング性能の向上度を詳しく解説します。</p>
-                            <div class="article-meta">
-                                <span class="article-date">2025年6月6日</span>
-                                <a href="#" class="read-more">続きを読む</a>
-                            </div>
-                        </div>
-                    </article>
+                          </div>
+                        </article>
+                      </a>
+                    ))
+                  }
                 </div>
+              </div>
+
+              <!-- ニュースタブ (空の場合の表示) -->
+              <div class="tab-panel" id="news">
+                <div class="empty-state">
+                  <h3>記事がありません</h3>
+                  <p>現在ニュース記事は投稿されていません。</p>
+                </div>
+              </div>
             </div>
+          </div>
+
+          <script>
+            document.addEventListener("DOMContentLoaded", function () {
+              // 既存のタブボタンのイベントリスナー
+              const tabButtons = document.querySelectorAll(".tab-button");
+              const tabItems = document.querySelectorAll(".tab-item");
+              const tabPanels = document.querySelectorAll(".tab-panel");
+
+              // タブリストのイベントリスナー
+              tabItems.forEach((item) => {
+                item.addEventListener("click", function () {
+                  const targetTab = this.getAttribute("data-tab");
+
+                  // タブリストのアクティブ状態を更新
+                  tabItems.forEach((tab) => tab.classList.remove("active"));
+                  this.classList.add("active");
+
+                  // 対応するタブボタンをクリック
+                  tabButtons.forEach((button) => {
+                    if (button.getAttribute("data-tab") === targetTab) {
+                      // 修正: HTMLElementとして型アサーションを行う
+                      (button as HTMLElement).click();
+                    }
+                  });
+                });
+              });
+
+              // 既存のタブボタンのイベントハンドラー
+              tabButtons.forEach((button) => {
+                button.addEventListener("click", function () {
+                  const targetTab = this.getAttribute("data-tab");
+
+                  // アクティブなタブボタンを切り替え
+                  tabButtons.forEach((btn) => btn.classList.remove("active"));
+                  this.classList.add("active");
+
+                  // タブリストのアクティブ状態も更新
+                  tabItems.forEach((item) => {
+                    if (item.getAttribute("data-tab") === targetTab) {
+                      item.classList.add("active");
+                    } else {
+                      item.classList.remove("active");
+                    }
+                  });
+
+                  // タブパネルを切り替え
+                  tabPanels.forEach((panel) => {
+                    panel.classList.remove("active");
+                    if (panel.id === targetTab) {
+                      panel.classList.add("active");
+                    }
+                  });
+
+                  // アニメーション効果
+                  const activeGrid = document.querySelector(
+                    `#${targetTab} .article-grid`
+                  );
+                  if (activeGrid && activeGrid instanceof HTMLElement) {
+                    activeGrid.style.animation = "none";
+                    setTimeout(() => {
+                      activeGrid.style.animation =
+                        "fadeInUp 0.6s ease forwards";
+                    }, 50);
+                  }
+                });
+              });
+            });
+          </script>
+        </body>
+      </html>
+
+      <!-- ページ下部　アフィリエイトリンク(amazon) -->
+
+    <section class="affiliate-section">
+      <h2>おすすめのデバイス</h2>
+      <div class="affiliate-grid">
+        <div class="affiliate-card">
+          <img
+            src="/affiliate/mouse1.png"
+            alt="Logicool G PRO 2 LIGHTSPEED"
+          />
+          <h3>Logicool G PRO 2 LIGHTSPEED</h3>
+          <p>軽量で高性能なゲーミングマウス</p>
+          <p class="price">¥17600</p>
+          <a href="https://amzn.to/3Tt0xfd" target="_blank" class="button"
+            >Amazonで見る</a
+          >
+        </div>
+        <div class="affiliate-card">
+          <img
+            src="/affiliate/ultra.png"
+            alt="Razer Pro Type Ultra JP"
+          />
+          <h3>Razer Pro Type Ultra JP</h3>
+          <p>快適なタイピングが可能なメカニカルキーボード</p>
+          <p class="price">¥24,200</p>
+          <a href="https://amzn.to/3Ihjv5V" target="_blank" class="button"
+            >Amazonで見る</a
+          >
+        </div>
+        <div class="affiliate-card">
+          <img
+            src="/affiliate/monita1.png"
+            alt="BenQ ZOWIE XL2546K"
+          />
+          <h3>MSI MAG 274QF</h3>
+          <p>180Hz対応のゲーミングモニター</p>
+          <p class="price">¥33,800</p>
+          <a href="https://amzn.to/4nGurds" target="_blank" class="button"
+            >Amazonで見る</a
+          >
+        </div>
+        <div class="affiliate-card">
+          <img
+            src="/affiliate/pad.png"
+            alt="Logicool G ゲーミングマウスパッド"
+          />
+          <h3>Logicool G ゲーミングマウスパッド</h3>
+          <p>滑らかな操作感のマウスパッド</p>
+          <p class="price">¥1,700</p>
+          <a href="https://amzn.to/4nDooGI" target="_blank" class="button"
+            >Amazonで見る</a
+          >
         </div>
       </div>
-      <!-- タブ付き記事リストここまで -->
+    </section>
 
       <style>
-        /* ここにpromptのstyle部分を貼り付けてください（省略可） */
+        .affiliate-section {
+          padding: 2rem;
+          background-color: #f9f9f9;
+          border-radius: 8px;
+          box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+          margin: 2rem 0;
+        }
+
+        .affiliate-section h2 {
+          font-size: 1.8rem;
+          margin-bottom: 1rem;
+          color: #333;
+        }
+
+        .affiliate-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+          gap: 1.5rem;
+        }
+
+        .affiliate-card {
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          padding: 1rem;
+          text-align: center;
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          transition:
+            transform 0.2s ease,
+            box-shadow 0.2s ease;
+        }
+
+        .affiliate-card:hover {
+          transform: translateY(-5px);
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .affiliate-card img {
+          width: 100%;
+          height: auto;
+          border-radius: 4px;
+          margin-bottom: 1rem;
+        }
+
+        .affiliate-card h3 {
+          font-size: 1.2rem;
+          margin-bottom: 0.5rem;
+          color: #333;
+        }
+
+        .affiliate-card p {
+          font-size: 0.9rem;
+          color: #666;
+          margin-bottom: 1rem;
+        }
+
+        .affiliate-card .price {
+          font-size: 1.2rem;
+          font-weight: bold;
+          color: #e60023;
+          margin-bottom: 1rem;
+        }
+
+        .affiliate-card a {
+          display: inline-block;
+          padding: 0.5rem 1rem;
+          background-color: #ff9900;
+          color: #fff;
+          text-decoration: none;
+          border-radius: 4px;
+          font-weight: bold;
+          transition: background-color 0.2s ease;
+        }
+
+        .affiliate-card a:hover {
+          background-color: #cc7a00;
+        }
       </style>
-      <script>
-        // ここにpromptのscript部分を貼り付けてください
-        document.addEventListener('DOMContentLoaded', function() {
-    const tabButtons = document.querySelectorAll('.tab-button');
-    const tabPanels = document.querySelectorAll('.tab-panel');
-
-    tabButtons.forEach(button => {
-      button.addEventListener('click', function (event) {
-        const targetTab = (event.currentTarget as HTMLElement).getAttribute('data-tab');
-
-        // アクティブなタブボタンを切り替え
-        tabButtons.forEach(btn => btn.classList.remove('active'));
-        (event.currentTarget as HTMLElement).classList.add('active');
-
-        // タブパネルを切り替え
-        tabPanels.forEach(panel => {
-          panel.classList.remove('active');
-          if (panel.id === targetTab) {
-            panel.classList.add('active');
-          }
-        });
-
-        // アニメーション効果のために少し遅延させてグリッドを再表示
-        const activeGrid = document.querySelector(`#${targetTab} .article-grid`) as HTMLElement | null;
-        if (activeGrid) {
-          activeGrid.style.animation = 'none';
-          setTimeout(() => {
-            activeGrid.style.animation = 'fadeInUp 0.6s ease forwards';
-          }, 50);
-        }
-      });
-    });
-
-    // 記事カードのクリックイベント
-    document.querySelectorAll('.article-card').forEach(card => {
-      card.addEventListener('click', function (event) {
-        if ((event.target as HTMLElement)?.classList?.contains('read-more')) {
-          return; // "続きを読む"ボタンの場合は何もしない
-        }
-        // カードクリック時のアニメーション
-        (event.currentTarget as HTMLElement).style.transform = 'scale(0.98)';
-        setTimeout(() => {
-          (event.currentTarget as HTMLElement).style.transform = '';
-        }, 150);
-      });
-    });
-
-    // "続きを読む"ボタンのクリックイベント
-    document.querySelectorAll('.read-more').forEach(button => {
-      button.addEventListener('click', function (event) {
-        event.preventDefault();
-        event.stopPropagation();
-        (event.currentTarget as HTMLElement).style.transform = 'scale(0.95)';
-        setTimeout(() => {
-          (event.currentTarget as HTMLElement).style.transform = '';
-          alert('記事の詳細ページに移動します'); // 実際の実装では適切なページに遷移
-        }, 150);
-      });
-    });
-  });
-    </script>
-</body>
-</html>
-
-      
-
-      
-
-      <!-- ページ下部　アフィリエイトリンク -->
-
-      <section class="affiliate-section">
-        <h2>おすすめのゲーミングデバイス</h2>
-        <div class="affiliate-grid">
-          <div class="affiliate-card">
-            <img src="https://via.placeholder.com/250x150" alt="商品1" />
-            <h3>Logicool G PRO X SUPERLIGHT</h3>
-            <p>軽量で高性能なゲーミングマウス</p>
-            <p class="price">¥19,000</p>
-            <a href="https://www.amazon.co.jp/" target="_blank">Amazonで見る</a>
-          </div>
-          <div class="affiliate-card">
-            <img src="https://via.placeholder.com/250x150" alt="商品2" />
-            <h3>Razer BlackWidow V3</h3>
-            <p>快適なタイピングが可能なメカニカルキーボード</p>
-            <p class="price">¥15,000</p>
-            <a href="https://www.amazon.co.jp/" target="_blank">Amazonで見る</a>
-          </div>
-          <div class="affiliate-card">
-            <img src="https://via.placeholder.com/250x150" alt="商品3" />
-            <h3>BenQ ZOWIE XL2546K</h3>
-            <p>240Hz対応のゲーミングモニター</p>
-            <p class="price">¥45,000</p>
-            <a href="https://www.amazon.co.jp/" target="_blank">Amazonで見る</a>
-          </div>
-          <div class="affiliate-card">
-            <img src="https://via.placeholder.com/250x150" alt="商品4" />
-            <h3>SteelSeries QcK Heavy</h3>
-            <p>滑らかな操作感のマウスパッド</p>
-            <p class="price">¥3,000</p>
-            <a href="https://www.amazon.co.jp/" target="_blank">Amazonで見る</a>
-          </div>
-        </div>
-      </section>
     </main>
+
+    <!-- ページ下部　ad-section -->
 
     <section class="ad-section">
       <div class="ad-container">
