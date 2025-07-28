@@ -14,3 +14,30 @@ export async function GET(context) {
 		})),
 	});
 }
+
+export async function GET(context) {
+	const posts = await getCollection('mobileblog');
+	return rss({
+		title: SITE_TITLE,
+		description: SITE_DESCRIPTION,
+		site: context.site,
+		items: posts.map((post) => ({
+			...post.data,
+			link: `/mobileblog/${post.id}/`,
+		})),
+	});
+}
+
+export async function GET(context) {
+	const posts = await getCollection('device');
+	return rss({
+		title: SITE_TITLE,
+		description: SITE_DESCRIPTION,
+		site: context.site,
+		items: posts.map((post) => ({
+			...post.data,
+			link: `/device/${post.id}/`,
+		})),
+	});
+}
+
