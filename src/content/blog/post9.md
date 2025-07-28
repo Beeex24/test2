@@ -2,13 +2,13 @@
 title: '【Steam夏セール2025】🏁 首都高バトルが10%OFFセール中！18年ぶりの復活作品をお得にゲット'
 description: '18年ぶりに復活した首都高バトルがSteamで10%OFFセール開催中！封鎖された未来の東京で首都高バトルを楽しもう。ユーザー評価94%の高評価ゲームの魅力とセール情報を詳しく解説。'
 pubDate: 'Jun 28 2025'
-heroImage: '/sale/syutoko.png'
+heroImage: '/pcgame/sale/syutoko.png'
 category: 'SALE'
 ---
 
 ## 🎮 18年ぶりの復活！首都高バトルが熱いセール開催中
 
-![blog placeholder](/sale/sale3.png)
+![blog placeholder](/pcgame/sale/sale3.png)
 
 首都高バトルがSteamで10%OFFセールを開催中！18年ぶりに復活したこの伝説的レーシングゲームを、今ならお得な価格で手に入れることができます。
 
@@ -20,7 +20,7 @@ category: 'SALE'
 
 ### 🏎️ ゲームの特徴
 
-![blog placeholder](/sale/syutoko3.png)
+![blog placeholder](/pcgame/sale/syutoko3.png)
 
 **SP（スピリットポイント）バトルシステム**
 SPバトルは、ドライバーの意志力を数値化したスピリットポイントに基づく独特なバトル機能で、単純なスピード勝負ではなく、心理戦も重要な要素となっています。
@@ -34,7 +34,7 @@ SPバトルは、ドライバーの意志力を数値化したスピリットポ
 
 ### 🚗 Early Accessの充実内容
 
-![blog placeholder](/sale/syutoko2.png)
+![blog placeholder](/pcgame/sale/syutoko2.png)
 
 現在Early Access版では以下の内容が楽しめます：
 

@@ -3,13 +3,13 @@ title: '【プライムデー2025速報】iPad・MacBook・ゲーミングモニ
 description: 'Amazonプライムデー2025（7月11日～14日）で話題の商品を徹底解説！iPad Air M4、MacBook Air M4、ゲーミングモニター、AirPods Proなど、実際のセール商品と攻略法を完全網羅。'
 pubDate: '2025-07-10'
 updatedDate: '2025-07-10'
-heroImage: '/primeday/amazon.png'
+heroImage: '/devicese/primeday/amazon.png'
 category: 'others'
 ---
 
 # 【プライムデー2025速報】iPad・MacBook・ゲーミングモニターが大幅値下げ！今すぐ狙うべき目玉商品完全ガイド
 
-![blog placeholder](/primeday/prime2.png)
+![blog placeholder](/devicese/primeday/prime2.png)
 
 **🎉 史上初の4日間開催！プライムデー2025が絶賛開催中！**
 
@@ -43,7 +43,7 @@ Amazonポイント18%還元も。「プライムデーポイントアップキ�
 #### iPad Air M2 (2024年モデル)
 Apple 2025 MacBook Air M2 13.6 インチ 16GBユニファイドメモリ 256GB SSDが先行セールに登場！
 
-![blog placeholder](/primeday/ipad1.png)
+![blog placeholder](/devicese/primeday/ipad1.png)
 
 **11インチモデル**
 - **256GB**: 通常価格 ¥106,800 → ¥89,800 **(-16%off)** <br/>
@@ -63,7 +63,7 @@ Apple 2025 MacBook Air M2 13.6 インチ 16GBユニファイドメモリ 256GB S
   </a>
 </div>
 
-![blog placeholder](/primeday/ipad2.png)
+![blog placeholder](/devicese/primeday/ipad2.png)
 
 
 **13インチモデル**
@@ -95,7 +95,7 @@ Apple 2025 MacBook Air M2 13.6 インチ 16GBユニファイドメモリ 256GB S
 #### MacBook Air M4 (2025年最新)
 機能性バツグンなノートパソコン。処理速度も速く、直感的に使えてストレスフリーと高評価多数！
 
-![blog placeholder](/primeday/macbook.png)
+![blog placeholder](/devicese/primeday/macbook.png)
 
 **13インチモデル**
 - **16GB/256GB**: 通常価格 ¥158,141 → ¥141,800 **(-14%off)**
@@ -112,7 +112,7 @@ Apple 2025 MacBook Air M2 13.6 インチ 16GBユニファイドメモリ 256GB S
 #### AirPods Pro 2 (USB-C)
 Apple AirPods Pro 2 ワイヤレスイヤホン、Bluetooth5.3、アクティブノイズキャンセリング、外部音取り込み、パーソナライズされた空間オーディオ、原音に忠実なサウンド、H2 チップ、USB-C 充電、防塵性能と耐汗耐水性能、「探す」対応、Qi充電、ヒアリング補助機能
 
-![blog placeholder](/primeday/airpod.png)
+![blog placeholder](/devicese/primeday/airpod.png)
 
 - 通常価格: ¥39,800
 - セール価格: ¥29,800 **(-25%off)**
@@ -127,7 +127,7 @@ Apple AirPods Pro 2 ワイヤレスイヤホン、Bluetooth5.3、アクティブ
 &nbsp;  
 
 
-![blog placeholder](/primeday/airpod4.png)
+![blog placeholder](/devicese/primeday/airpod4.png)
 
 #### AirPods 4
 - 通常価格: ¥29,800
@@ -142,7 +142,7 @@ Apple AirPods Pro 2 ワイヤレスイヤホン、Bluetooth5.3、アクティブ
 
 ## 🖥️ ゲーミングモニター セール特集
 
-![blog placeholder](/primeday/monitaa.png)
+![blog placeholder](/devicese/primeday/monitaa.png)
 
 ### 🎮 注目のゲーミングモニター
 
@@ -181,7 +181,7 @@ Apple AirPods Pro 2 ワイヤレスイヤホン、Bluetooth5.3、アクティブ
 
 ## 📱 Amazonデバイス セール情報
 
-![blog placeholder](/primeday/firetab.png)
+![blog placeholder](/devicese/primeday/firetab.png)
 
 ### 🔥 Fire タブレット シリーズ
 
@@ -230,7 +230,7 @@ Echo Dot (エコードット) 第5世代 – Alexa、センサー搭載、鮮や
 
 ## 🛡️ セキュリティ・周辺機器
 
-![blog placeholder](/primeday/camera.png)
+![blog placeholder](/devicese/primeday/camera.png)
 
 ### 📹 防犯カメラ・セキュリティ
 

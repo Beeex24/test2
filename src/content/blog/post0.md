@@ -2,13 +2,13 @@
 title: '【ApexLegends】フューチャーアイコンイベント開催！新モード「アリーナ：デュエル」とワットソン・ヴァンテージ大幅強化まとめ'
 description: 'Apex Legendsフューチャーアイコンイベントが6月24日から開催！新ゲームモード「アリーナ：デュエル」の詳細、ワットソンとヴァンテージの大幅バフ、プレステージスキン「Apexアイコン」などの最新情報を詳しく解説します。'
 pubDate: 'Jun 21 2025'
-heroImage: '/apex/update.png'
+heroImage: '/pcgame/apex/update.png'
 category: 'apexlegends'
 ---
 
 ## 【重要ポイント】フューチャーアイコンイベントの概要
 
-![blog placeholder](/apex/future.png)
+![blog placeholder](/pcgame/apex/future.png)
 
 Apex Legendsのシーズン半ばアップデートで、**6月24日から7月15日まで「フューチャーアイコンイベント」**が開催されます！今回のイベントでは新ゲームモード「アリーナ：デュエル」の実装、ワットソンとヴァンテージの大幅強化、さらにワットソン用プレステージスキン「Apexアイコン」の登場など盛りだくさんの内容となっています。
 
@@ -25,7 +25,7 @@ Apex Legendsのシーズン半ばアップデートで、**6月24日から7月15
 
 ## 🥊 新ゲームモード「アリーナ：デュエル」詳細解説
 
-![blog placeholder](/apex/duel.png)
+![blog placeholder](/pcgame/apex/duel.png)
 
 ### ⚔️ アリーナ：デュエルの基本システム
 
@@ -62,7 +62,7 @@ Apex Legendsのシーズン半ばアップデートで、**6月24日から7月15
 
 ## ⚡ ワットソン大幅強化 - メタ復帰確実
 
-![blog placeholder](/apex/wat.png)
+![blog placeholder](/pcgame/apex/wat.png)
 
 ### 🔋 パッシブ「天才のひらめき」強化
 
@@ -98,7 +98,7 @@ Apex Legendsのシーズン半ばアップデートで、**6月24日から7月15
 
 ## 🎯 ヴァンテージ調整 - より機動的で実用的に
 
-![blog placeholder](/apex/van.png)
+![blog placeholder](/pcgame/apex/van.png)
 
 ### 🔍 パッシブ「スポッターレンズ」改善
 
@@ -133,7 +133,7 @@ Apex Legendsのシーズン半ばアップデートで、**6月24日から7月15
 
 ### 💎 ワットソン プレステージスキン「Apexアイコン」
 
-![blog placeholder](/apex/skin.png)
+![blog placeholder](/pcgame/apex/skin.png)
 
 **入手方法：**
 - **フューチャーアイコンイベントパック**からランダム入手

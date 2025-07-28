@@ -2,7 +2,7 @@
 title: "【レインボーシックス シージ】Y10S2.2パッチノート完全解説 - 最新アップデート内容とバグ修正まとめ"
 description: "レインボーシックス シージの最新アップデートY10S2.2パッチノートを詳しく解説。Dual Frontモードの変更点、オペレーターのバグ修正、ユーザーエクスペリエンス改善など、全ての変更点を日本語で分かりやすく紹介します。"
 pubDate: 2025-07-08
-heroImage: "/r6s/title.png"
+heroImage: "/pcgame/r6s/title.png"
 category: 'rainbowsixsiege'
 ---
 
@@ -12,7 +12,7 @@ category: 'rainbowsixsiege'
 
 ## **Dual Frontモードの重要な変更**
 
-![blog placeholder](/r6s/dual.png)
+![blog placeholder](/pcgame/r6s/dual.png)
 
 ### ダウン状態オペレーターの体力調整
 
@@ -24,7 +24,7 @@ category: 'rainbowsixsiege'
 
 ### オペレーター別修正内容
 
-![blog placeholder](/r6s/clash.png)
+![blog placeholder](/pcgame/r6s/clash.png)
 
 **Clash（クラッシュ）関連**
 - CCEシールド装備時にDokkaebi（ドッケビ）のLogic Bombを防げるバグを修正
@@ -32,7 +32,7 @@ category: 'rainbowsixsiege'
 &nbsp;  
 &nbsp;  
 
-![blog placeholder](/r6s/teru.png)
+![blog placeholder](/pcgame/r6s/teru.png)
 
 **Thermite（テルミット）関連**
 - Exothermic Charge（テルミットチャージ）とHard Breach Charge（ハードブリーチチャージ）が、電気が作動する前に設置された場合に破壊されないバグを修正

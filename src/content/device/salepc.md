@@ -3,7 +3,7 @@ title: '【プライムデー2025】ASUSゲーミングPC特価情報！RTX 4060
 description: 'Amazonプライムデー2025でASUSゲーミングPCが大特価！TUF Gaming F15 RTX 4060搭載モデルやROG Flow Z13など、本格ゲーミングPCのセール情報と選び方を完全解説！'
 pubDate: '2025-07-11'
 updatedDate: '2025-07-11'
-heroImage: '/primeday/amazonpc.png'
+heroImage: '/devicese/primeday/amazonpc.png'
 category: 'others'
 ---
 
@@ -17,7 +17,7 @@ category: 'others'
 
 ### 🔥 目玉商品：TUF Gaming F15 RTX 4060搭載モデル
 
-![blog placeholder](/primeday/salepc.png)
+![blog placeholder](/devicese/primeday/salepc.png)
 
 #### Amazon限定モデル FX507VV シリーズ
 

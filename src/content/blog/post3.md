@@ -2,13 +2,13 @@
 title: '【VALORANT】VALORANTチャンピオンズ2025終了後の熱狂続く！秋冬の国際大会ラインナップを徹底解説'
 description: 'Champions 2025終了後も止まらないVALORANT競技シーンの盛り上がり。Ascension、Game Changers Championship、Red Bull Home Groundなど、年末に向けた注目の国際イベント情報を詳しく紹介。'
 pubDate: 'Jun 27 2025'
-heroImage: '/valorant/event/VCT2.png'
+heroImage: '/pcgame/valorant/event/VCT2.png'
 category: 'VALORANT'
 ---
 
 ## はじめに：Champions後も続くVALORANT競技シーンの熱狂
 
-![blog placeholder](/valorant/event/VCT5.png)
+![blog placeholder](/pcgame/valorant/event/VCT5.png)
 
 VALORANTの最高峰大会「Champions 2025」が10月初旬に幕を閉じた後も、競技シーンの興奮は続きます。**Ascension**、**Game Changers Championship**、そして数々の国際トーナメントが待ち受けており、世界中のトップチームが栄光、昇格、そしてトロフィーをかけて激突する予定です。
 
@@ -55,7 +55,7 @@ Ascensionには複雑な出場・昇格システムが採用されています�
 
 ## Game Changers Championship：ソウルで初開催の歴史的大会
 
-![blog placeholder](/valorant/event/VCT4.png)
+![blog placeholder](/pcgame/valorant/event/VCT4.png)
 
 ### 開催詳細
 
@@ -73,7 +73,7 @@ Game Changers Championshipは、女性プレイヤーやマージナライズさ
 
 ## VCT Partner Series：新たなトーナメント体系の始動
 
-![blog placeholder](/valorant/event/VCT3.png)
+![blog placeholder](/pcgame/valorant/event/VCT3.png)
 
 ### 概要と目的
 

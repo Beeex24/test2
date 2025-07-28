@@ -25,7 +25,7 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
   const sortedPosts = allPosts.sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   );
-  return paginate(sortedPosts, { pageSize: 12 });
+  return paginate(sortedPosts, { pageSize: 100 });
 }
 
 const { page } = Astro.props as { page: BlogPage };
@@ -293,27 +293,27 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
         border: 2px solid transparent;
       }
 
-      .blog-card[data-category="logicool"] {
+      .blog-card[data-category="pcparts"] {
         border-color: rgba(0, 176, 255, 0.3);
       }
 
-      .blog-card[data-category="razer"] {
+      .blog-card[data-category="monitor"] {
         border-color: rgba(0, 255, 76, 0.3);
       }
 
-      .blog-card[data-category="steelseries"] {
+      .blog-card[data-category="keyboardmouse"] {
         border-color: rgba(255, 193, 0, 0.3);
       }
 
-      .blog-card[data-category="hyperx"] {
+      .blog-card[data-category="speaker"] {
         border-color: rgba(255, 107, 107, 0.3);
       }
 
-      .blog-card[data-category="corsair"] {
+      .blog-card[data-category="gamingdevice"] {
         border-color: rgba(255, 193, 7, 0.3);
       }
 
-      .blog-card[data-category="benq"] {
+      .blog-card[data-category="sale"] {
         border-color: rgba(220, 53, 69, 0.3);
       }
 
@@ -381,32 +381,32 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
         z-index: 3;
       }
 
-      .blog-card-category.logicool {
+      .blog-card-category.pcparts {
         background: linear-gradient(135deg, #00b0ff, #0288d1);
         color: white;
       }
 
-      .blog-card-category.razer {
+      .blog-card-category.monitor {
         background: linear-gradient(135deg, #00ff4c, #00c853);
         color: white;
       }
 
-      .blog-card-category.steelseries {
+      .blog-card-category.keyboardmouse {
         background: linear-gradient(135deg, #ff6b6b, #ee5a24);
         color: white;
       }
 
-      .blog-card-category.hyperx {
+      .blog-card-category.speaker {
         background: linear-gradient(135deg, #dc3545, #e74c3c);
         color: white;
       }
 
-      .blog-card-category.corsair {
+      .blog-card-category.gamingdevice {
         background: linear-gradient(135deg, #ffc107, #fd7e14);
         color: white;
       }
 
-      .blog-card-category.benq {
+      .blog-card-category.sale {
         background: linear-gradient(135deg, #ffc100, #ff8f00);
         color: white;
       }
@@ -767,7 +767,7 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
       <div class="main-container">
         <!-- カテゴリーサイドバー -->
         <aside class="category-sidebar" id="category-sidebar">
-          <h2>ブランド</h2>
+          <h2>カテゴリー</h2>
           <ul class="category-list">
             <li class="category-item">
               <button class="category-button active" data-category="all">
@@ -775,33 +775,33 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="logicool">
-                Logicool
+              <button class="category-button" data-category="pcparts">
+                PCパーツ類
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="razer">
-                Razer
+              <button class="category-button" data-category="monitor">
+                モニター類
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="steelseries">
-                SteelSeries
+              <button class="category-button" data-category="keyboardmouse">
+                キーボード・マウス
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="hyperx">
-                HyperX
+              <button class="category-button" data-category="speaker">
+                スピーカー類
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="corsair">
-                Corsair
+              <button class="category-button" data-category="gamingdevice">
+                ゲーミングデバイス類
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="benq">
-                BenQ
+              <button class="category-button" data-category="sale">
+                最新セール情報
               </button>
             </li>
             <li class="category-item">
@@ -821,18 +821,18 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
                 // タイトルからカテゴリーを判定する簡易的な方法
                 const title = post.data.title.toLowerCase();
                 let category = "others";
-                if (title.includes("logicool") || title.includes("logitech")) {
-                  category = "logicool";
-                } else if (title.includes("razer")) {
-                  category = "razer";
-                } else if (title.includes("steelseries")) {
-                  category = "steelseries";
-                } else if (title.includes("hyperx")) {
-                  category = "hyperx";
-                } else if (title.includes("corsair")) {
-                  category = "corsair";
-                } else if (title.includes("benq")) {
-                  category = "benq";
+                if (title.includes("pcparts") || title.includes("PCパーツ") || title.includes("グラフィックボード") || title.includes("CPU") || title.includes("メモリ")|| title.includes("マザーボード") || title.includes("電源ユニット")|| title.includes("PCケース")) {
+                  category = "pcparts";
+                } else if (title.includes("monitor") || title.includes("モニター")) {
+                  category = "monitor";
+                } else if (title.includes("keyboardmouse") || title.includes("キーボード") || title.includes("マウス")) {
+                  category = "keyboardmouse";
+                } else if (title.includes("speaker") || title.includes("スピーカー")) {
+                  category = "speaker";
+                } else if (title.includes("gamingdevice") || title.includes("コンソール") || title.includes("コンシューマー") || title.includes("ps5") || title.includes("xbox") || title.includes("switch")) {
+                  category = "gamingdevice";
+                } else if (title.includes("sale") || title.includes("セール情報") || title.includes("セール") || title.includes("特価")|| title.includes("値下げ")) {
+                  category = "sale";
                 }
 
                 return (
@@ -847,18 +847,18 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
                       <div class="blog-card-image-overlay" />
                     </div>
                     <div class={`blog-card-category ${category}`}>
-                      {category === "logicool"
-                        ? "Logicool"
-                        : category === "razer"
-                          ? "Razer"
-                          : category === "steelseries"
-                            ? "SteelSeries"
-                            : category === "hyperx"
-                              ? "HyperX"
-                              : category === "corsair"
-                                ? "Corsair"
-                                : category === "benq"
-                                  ? "BenQ"
+                      {category === "pcparts"
+                        ? "PCパーツ類"
+                        : category === "monitor"
+                          ? "モニター類"
+                          : category === "keyboardmouse"
+                            ? "キーボード・マウス"
+                            : category === "speaker"
+                              ? "スピーカー類"
+                              : category === "gamingdevice"
+                                ? "ゲーミングデバイス類"
+                                : category === "sale"
+                                  ? "最新セール情報"
                                   : "その他"}
                     </div>
                     <div class="blog-card-content">

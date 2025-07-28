@@ -3,13 +3,13 @@ title: '【2025年最新版】配信者必見！キャプチャボードの選�
 description: 'ゲーム配信に必須のキャプチャボード選びを徹底解説。2025年最新のおすすめ製品から初心者向けの設定方法まで、配信者に必要な情報を完全網羅。Elgato、AVerMedia等人気ブランドの比較レビューも掲載。'
 pubDate: '2025-07-06'
 updatedDate: '2025-07-06'
-heroImage: '/device/capture/cap.png'
+heroImage: '/devicese/device/capture/cap.png'
 category: 'others'
 ---
 
 # 【2025年最新版】配信者必見！キャプチャボードの選び方とおすすめ製品完全紹介
 
-![blog placeholder](/device/capture/capthree.png)
+![blog placeholder](/devicese/device/capture/capthree.png)
 
 ゲーム配信やライブストリーミングを始めたい配信者にとって、**キャプチャボード**は必須のデバイスです。しかし、ElgatoやAVerMediaなど多くのメーカーから様々な製品が発売されており、どれを選べば良いか迷っている方も多いのではないでしょうか？
 
@@ -30,7 +30,7 @@ PlayStation 5、Nintendo Switch、Xbox Series X/Sでの配信を検討してい�
 
 ## キャプチャボードの種類と特徴
 
-![blog placeholder](/device/capture/pciecap.png)
+![blog placeholder](/devicese/device/capture/pciecap.png)
 
 ### 内蔵型（PCIe接続）
 
@@ -43,7 +43,7 @@ PlayStation 5、Nintendo Switch、Xbox Series X/Sでの配信を検討してい�
 - デスクトップPCが必要
 - 取り付けはさほど難しくはないが、丁寧に取り付けないと破損する可能性がある
 
-![blog placeholder](/device/capture/usbcap.png)
+![blog placeholder](/devicese/device/capture/usbcap.png)
 
 ### 外付け型（USB接続）
 
@@ -96,7 +96,7 @@ PlayStation 5、Nintendo Switch、Xbox Series X/Sでの配信を検討してい�
 
 ### 1. Elgato Game Capture HD60 X
 
-![blog placeholder](/device/capture/captwo.png)
+![blog placeholder](/devicese/device/capture/captwo.png)
 
 **価格帯**: ¥22000～
 
@@ -126,7 +126,7 @@ PlayStation 5、Nintendo Switch、Xbox Series X/Sでの配信を検討してい�
 
 ### 2. Live Gamer ULTRA 2.1 GC553G2
 
-![blog placeholder](/device/capture/capeight.png)
+![blog placeholder](/devicese/device/capture/capeight.png)
 
 **価格帯**: ¥25000～
 
@@ -155,7 +155,7 @@ PlayStation 5、Nintendo Switch、Xbox Series X/Sでの配信を検討してい�
 
 ### 3. AVerMedia Live Gamer BOLT GC555
 
-![blog placeholder](/device/capture/capfor.png)
+![blog placeholder](/devicese/device/capture/capfor.png)
 
 **価格帯**: ¥31000～
 
@@ -184,7 +184,7 @@ PlayStation 5、Nintendo Switch、Xbox Series X/Sでの配信を検討してい�
 
 ### 4. Elgato 4K60 Pro MK.2
 
-![blog placeholder](/device/capture/capfive.png)
+![blog placeholder](/devicese/device/capture/capfive.png)
 
 **価格帯**: ¥42000～
 
@@ -213,7 +213,7 @@ PlayStation 5、Nintendo Switch、Xbox Series X/Sでの配信を検討してい�
 
 ### 5. AVerMedia Live Gamer MINI GC311
 
-![blog placeholder](/device/capture/capsix.png)
+![blog placeholder](/devicese/device/capture/capsix.png)
 
 **価格帯**: ¥12000～
 

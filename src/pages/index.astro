@@ -10,11 +10,15 @@ const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
+const mobilePosts = (await getCollection("mobileblog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
+
 const devicePosts = (await getCollection("device")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 
-const allPosts = [...posts, ...devicePosts].sort(
+const allPosts = [...posts, ...mobilePosts, ...devicePosts].sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
 );
 ---
@@ -865,7 +869,8 @@ const allPosts = [...posts, ...devicePosts].sort(
             <h1>記事一覧</h1>
             <ul class="tab-list">
               <li class="tab-item active" data-tab="all">最新記事</li>
-              <li class="tab-item" data-tab="blog">ブログ記事</li>
+              <li class="tab-item" data-tab="blog">ゲーム記事</li>
+              <li class="tab-item" data-tab="mobileblog">モバイルゲーム記事</li>
               <li class="tab-item" data-tab="device">デバイス記事</li>
             </ul>
           </section>
@@ -875,9 +880,10 @@ const allPosts = [...posts, ...devicePosts].sort(
               <button class="tab-button active" data-tab="all"
                 >すべての記事</button
               >
-              <button class="tab-button" data-tab="blog">ブログ記事</button>
+              <button class="tab-button" data-tab="blog">ゲーム記事</button>
+              <button class="tab-button" data-tab="mobileblog">モバイルゲーム記事</button>
               <button class="tab-button" data-tab="device">デバイス記事</button>
-              <button class="tab-button" data-tab="news">ニュース</button>
+
             </div>
 
             <div class="tab-content">
@@ -951,6 +957,38 @@ const allPosts = [...posts, ...devicePosts].sort(
                 </div>
               </div>
 
+              <!-- モバイルゲーム記事タブ -->
+              <div class="tab-panel" id="mobileblog">
+                <div class="article-grid">
+                  {
+                    mobilePosts.map((post) => (
+                      <a href={`/mobileblog/${post.id}/`} class="article-card-link">
+                        <article class="article-card">
+                          <img
+                            src={post.data.heroImage}
+                            alt={post.data.title}
+                            class="article-image"
+                          />
+                          <div class="article-content">
+                            <span class="article-category">デバイス</span>
+                            <h3 class="article-title">{post.data.title}</h3>
+                            <p class="article-description">
+                              {post.data.description}
+                            </p>
+                            <div class="article-meta">
+                              <span class="article-date">
+                                <FormattedDate date={post.data.pubDate} />
+                              </span>
+                              <span class="read-more">続きを読む</span>
+                            </div>
+                          </div>
+                        </article>
+                      </a>
+                    ))
+                  }
+                </div>
+              </div>
+
               <!-- デバイス記事タブ -->
               <div class="tab-panel" id="device">
                 <div class="article-grid">
@@ -982,16 +1020,6 @@ const allPosts = [...posts, ...devicePosts].sort(
                   }
                 </div>
               </div>
-
-              <!-- ニュースタブ (空の場合の表示) -->
-              <div class="tab-panel" id="news">
-                <div class="empty-state">
-                  <h3>記事がありません</h3>
-                  <p>現在ニュース記事は投稿されていません。</p>
-                </div>
-              </div>
-            </div>
-          </div>
 
           <script>
             document.addEventListener("DOMContentLoaded", function () {

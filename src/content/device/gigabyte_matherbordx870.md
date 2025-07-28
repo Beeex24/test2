@@ -3,7 +3,7 @@ title: 'GIGABYTE新作「X870・B850 AORUS STEALTH ICE」ホワイト背面配�
 description: 'GIGABYTEから背面配線に特化したホワイトカラーのX870・B850 AORUS STEALTH ICEマザーボードが2025年7月18日発売。USB4対応、WiFi 7搭載でゲーミングPCの配線がスッキリ美しく。'
 pubDate: '2025-07-16'
 updatedDate: '2025-07-16'
-heroImage: '/device/pcparts/x870.png'
+heroImage: '/devicese/device/pcparts/x870.png'
 category: 'others'
 ---
 
@@ -19,7 +19,7 @@ GIGABYTEから、AMD X870チップセットを搭載した「GIGABYTE X870 AORUS
 
 16+2+2 フェーズ・デジタル電源設計、VRM 用大型ヒートシンク & M.2 Thermal Guard Ext.、EZ-Latch による PCIe x16 スロットのボタン式クリックリリース & M.2 コネクタのネジ無し設計、DDR5 XMP & EXPO 対応、リア 2連 USB4 Type-C (40Gb/s)、フロント USB Gen2x2 Type-C (20Gb/s)を搭載しています。
 
-![blog placeholder](/device/pcparts/x870hide.png)
+![blog placeholder](/devicese/device/pcparts/x870hide.png)
 
 **主な特徴：**
 - **16+2+2フェーズデジタル電源設計** - 安定した電力供給でCPUの性能を最大限に引き出す

@@ -2,13 +2,13 @@
 title: "新しい相棒が登場！懐かしい銅色の輝きを持つMinecraftの銅のゴーレム"
 description: "Minecraftの2025年第3弾アップデートで登場する銅のゴーレムと新しい銅装備について詳しく解説。整理整頓の頼もしい助手から新たな装備階層まで、銅の新たな活用法をご紹介します。"
 pubDate: 2025-07-04
-heroImage: "/minecraft/updateone.png"
+heroImage: "/pcgame/minecraft/updateone.png"
 category: 'MINECRAFT'
 ---
 
 # 🤖 銅のゴーレム：あなたの拠点に欠かせない新しい相棒
 
-![blog placeholder](/minecraft/updatetwo.png)
+![blog placeholder](/pcgame/minecraft/updatetwo.png)
 
 チェストの中身がごちゃごちゃで困っていませんか？道具にもっとバリエーションが欲しいと思いませんか？朗報です！Minecraftの2025年第3弾ゲームドロップの最初の機能がBedrockベータ版とプレビューでテスト可能になり、Javaスナップショットにも間もなく登場します。
 
@@ -16,7 +16,7 @@ category: 'MINECRAFT'
 
 ## 💎 銅のゴーレム：整理整頓の専門家
 
-![blog placeholder](/minecraft/updateone.png)
+![blog placeholder](/pcgame/minecraft/updateone.png)
 
 銅のゴーレムは、インベントリの整理を手伝ってくれるMobで、美しい緑青（パティナ）を身にまといながら、あなたの拠点をより活気にあふれた、カラカラと音を立てる可愛らしい場所にしてくれます。
 
@@ -32,7 +32,7 @@ category: 'MINECRAFT'
 
 ## ⚔️ 銅装備：新しい装備階層の誕生
 
-![blog placeholder](/minecraft/updatethree.png)
+![blog placeholder](/pcgame/minecraft/updatethree.png)
 
 銅が正式に装備階層になります！その耐久性は石と鉄の間に位置し、これが銅で作る武器、道具、防具の性能に反映されます。
 
@@ -51,7 +51,7 @@ category: 'MINECRAFT'
 
 ## 🌟 実装スケジュール
 
-![blog placeholder](/minecraft/updatefor.png)
+![blog placeholder](/pcgame/minecraft/updatefor.png)
 
 現在、この機能は以下の環境でテスト可能です：
 

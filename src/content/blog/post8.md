@@ -2,19 +2,19 @@
 title: '【Steam夏セール2025】Escape the Backrooms が20%オフ！恐怖のバックルームを仲間と攻略しよう'
 description: 'Steamで話題のホラーゲーム「Escape the Backrooms」が現在20%オフセール中！最大4人での協力プレイが楽しめる、バックルーム脱出ホラーゲームの魅力とセール情報を詳しく解説します。'
 pubDate: 'June 28 2025'
-heroImage: '/sale/backroom.png'
+heroImage: '/pcgame/sale/backroom.png'
 category: 'SALE'
 ---
 
 ## 🎮 話題のホラーゲームが期間限定セール中！
 
-![blog placeholder](/sale/sale2.png)
+![blog placeholder](/pcgame/sale/sale2.png)
 
 現在Steamにて、一躍話題になったマルチプレイヤーホラーゲーム **「Escape the Backrooms」** が **20%オフ** のサマーセール価格で販売中です！通常価格1010円から20%割引されており、ホラーゲーム好きには見逃せないチャンスとなっています。
 
 ## 🔍 Escape the Backroomsとは？
 
-![blog placeholder](/sale/backroom2.png)
+![blog placeholder](/pcgame/sale/backroom2.png)
 
 **Escape the Backrooms**は、1-4人での協力プレイが可能なホラー探索ゲームです。人気のクリーピーパスタ「バックルーム」の世界観を忠実に再現しており、プレイヤーは薄気味悪いバックルームの迷宮から脱出を目指します。
 
@@ -53,7 +53,7 @@ category: 'SALE'
 
 ## 🏆 バックルームの世界を体験しよう
 
-![blog placeholder](/sale/backroom4.png)
+![blog placeholder](/pcgame/sale/backroom4.png)
 
 ### ゲームプレイのポイント
 

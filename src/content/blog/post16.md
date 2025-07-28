@@ -2,7 +2,7 @@
 title: "【2025年最新】ToHeart リマスター版レビュー - 90年代の名作ビジュアルノベルが3Dリメイクで復活！価格・評価・システムを徹底解説"
 description: "1997年の名作「ToHeart」がフル3Dリメイクで登場！AQUAPLUS開発のハートフル恋愛コメディが現代によみがえった。価格3,080円でSteamに登場したリマスター版の詳細レビュー、システム、評価を解説します。"
 pubDate: 2025-07-13
-heroImage: "/others/heart.png"
+heroImage: "/pcgame/others/heart.png"
 category: 'others'
 ---
 
@@ -12,7 +12,7 @@ category: 'others'
 
 ## ToHeartとは？ - 90年代を代表する恋愛アドベンチャーゲーム
 
-![blog placeholder](/others/heart2.png)
+![blog placeholder](/pcgame/others/heart2.png)
 
 **ToHeart**は、1997年にAQUAPLUSが開発したビジュアルノベルで、90年代の学園恋愛ゲームの金字塔として知られています。主人公は「ごく普通の青年」ですが、幼馴染のあかりや友人の雅史、志保たちと過ごす日常が描かれる「ハートフル」な恋愛コメディです。
 

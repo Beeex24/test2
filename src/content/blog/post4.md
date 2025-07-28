@@ -2,13 +2,13 @@
 title: '【オーバーウォッチ2】オーバーウォッチ2×G.I.ジョー コラボが熱い！限定スキン5種とイベント詳細まとめ'
 description: 'Overwatch 2とG.I.ジョーの期間限定コラボが7月2日より開始！スネークアイズ、コブラコマンダーなど豪華5種の限定スキンと特別チャレンジの詳細をお届けします。'
 pubDate: 'Jun 25 2025'
-heroImage: '/overwatch2/over2.png'
+heroImage: '/pcgame/overwatch2/over2.png'
 category: 'Overwatch2'
 ---
 
 ## 世代を超えた名作がOW2で激突！
 
-![blog placeholder](/overwatch2/over3.png)
+![blog placeholder](/pcgame/overwatch2/over3.png)
 
 世界征服をもくろむ悪の軍事組織「コブラ」と、世界を脅威から守るべく結成されたエキスパート集団「G.I.ジョー」の熱い戦いが、ついにOverwatch 2の世界にやってきました！
 

@@ -2,13 +2,13 @@
 title: '【MINECRAFT】Minecraft最新アップデート「Chase the Skies」と「Vibrant Visuals」が配信開始！飛行マウントとグラフィック刷新で空の冒険が始まる'
 description: 'Minecraft最新アップデート「Chase the Skies」でハッピーガストに乗って空を飛び、「Vibrant Visuals」で美しくなったグラフィックを楽しもう。新機能の詳細と対応デバイスを徹底解説！'
 pubDate: 'June 27 2025'
-heroImage: '/minecraft/maikura.png'
+heroImage: '/pcgame/minecraft/maikura.png'
 category: 'MINECRAFT'
 ---
 
 ## 【2025年最新】Minecraftが大幅進化！空を飛べる新アップデート配信開始
 
-![blog placeholder](/minecraft/maikura2.png)
+![blog placeholder](/pcgame/minecraft/maikura2.png)
 
 Minecraftの待望の新アップデート「Chase the Skies」が2025年6月17日にリリースされ、ついにプレイヤーが空を飛べる時代が到来しました。同時に配信された「Vibrant Visuals」により、Minecraftのグラフィックは10年の歴史の中で最大級の視覚的刷新を遂げています。
 
@@ -19,7 +19,7 @@ Minecraftの待望の新アップデート「Chase the Skies」が2025年6月17�
 
 **ハッピーガストの入手方法**
 
-![blog placeholder](/minecraft/maikura6.png)
+![blog placeholder](/pcgame/minecraft/maikura6.png)
 
 1. **ネザーで「干からびたガスト」ブロックを発見**
    - ネザーの化石構造物の近くで見つけることができます
@@ -36,7 +36,7 @@ Minecraftの待望の新アップデート「Chase the Skies」が2025年6月17�
 
 ### ✨ 革命的なグラフィック更新「Vibrant Visuals」
 
-![blog placeholder](/minecraft/maikura4.png)
+![blog placeholder](/pcgame/minecraft/maikura4.png)
 
 **主な改善点**
 - 太陽光による個別ブロックへの影の投影
@@ -76,7 +76,7 @@ Amos Roddyによる5つの新しいアンビエント楽曲がオーバーワー
 
 **プレイヤーロケーターバー**
 
-![blog placeholder](/minecraft/maikura5.png)
+![blog placeholder](/pcgame/minecraft/maikura5.png)
 
 マルチプレイヤーモードで友達の位置を色付きドットで表示し、高度も矢印で確認できる新機能です。
 

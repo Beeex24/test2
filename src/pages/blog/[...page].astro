@@ -29,7 +29,7 @@ export async function getStaticPaths({ paginate }: { paginate: any }) {
   const sortedPosts = allPosts.sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
   );
-  return paginate(sortedPosts, { pageSize: 12 });
+  return paginate(sortedPosts, { pageSize: 100 });
 }
 
 const { page } = Astro.props as { page: BlogPage };
@@ -798,12 +798,12 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="apex legends">
+              <button class="category-button" data-category="apexlegends">
                 エーペックスレジェンズ
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="rainbow six siege">
+              <button class="category-button" data-category="rainbowsixsiege">
                 レインボーシックスシージ
               </button>
             </li>
@@ -813,7 +813,7 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
               </button>
             </li>
             <li class="category-item">
-              <button class="category-button" data-category="grand theft auto vi">
+              <button class="category-button" data-category="grandtheftautovi">
                 グランド・セフト・オートVI
               </button>
             </li>
@@ -849,7 +849,7 @@ const displayLastPage = page.lastPage === 0 ? 1 : page.lastPage;
                   category = "rainbowsixsiege";
                 } else if (title.includes("minecraft") || title.includes("マインクラフト")) {
                   category = "minecraft";
-                } else if (title.includes("grandtheftautovi") || title.includes("グランド・セフト・オートVI")) {
+                } else if (title.includes("grandtheftautovi") || title.includes("グランド・セフト・オートVI") || title.includes("gta")) {
                   category = "grandtheftautovi";
                 } else if (title.includes("sale") || title.includes("セール")) {
                   category = "sale";

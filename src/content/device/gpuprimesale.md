@@ -3,13 +3,13 @@ title: '【プライムデー2025】MSI GeForce RTX 5070 Ti VENTUS 3X OC グラ�
 description: 'Amazonプライムデー2025で、MSI GeForce RTX 5070 Ti VENTUS 3X OCが19%OFF！最新のBlackwellアーキテクチャ搭載で16GB GDDR7メモリと8960 CUDAコア、4K・8K対応の高性能グラフィックスカードがお得に購入できるチャンス'
 pubDate: '2025-07-12'
 updatedDate: '2025-07-12'
-heroImage: '/primeday/5070ti.png'
+heroImage: '/devicese/primeday/5070ti.png'
 category: 'others'
 ---
 
 ## 【速報】MSI GeForce RTX 5070 Ti VENTUS 3X OC が19%OFF！プライムデー限定価格
 
-![blog placeholder](/primeday/rtx5070ti.png)
+![blog placeholder](/devicese/primeday/rtx5070ti.png)
 
 **Amazonプライムデー2025で注目の大型セールが開催中！** MSI GeForce RTX 5070 Ti 16G VENTUS 3X OC グラフィックスカード VD9043が19%の割引で138,700円（参考価格: 171,710円）という破格のセール価格で提供されています。
 
@@ -183,8 +183,9 @@ NVIDIA GeForce RTX 5070 Tiを搭載、8960基のCUDAコアとブーストクロ�
   <h3>🔗 関連記事</h3>
   <ul>
     <li><a href="/device/primeday">🛒 プライムデー2025速報 - 目玉商品完全ガイド</a></li>
-    <li><a href="/device/rtx5070ti-review">📊 RTX 5070 Ti 詳細レビュー - 性能ベンチマーク</a></li>
-    <li><a href="/device/gpu-power-guide">⚡ グラフィックスカード電源選びガイド</a></li>
+    <li><a href="/device/primesaleapple">⚡ 【プライムデー2025】iPhone 15 Pro Max 512GBなど今年最大級の値引きセール</a></li>
+    <li><a href="/device/gigabytertx5070ti">📊 Gigabyte RTX 5070 Ti 詳細レビュー </a></li>
+
   </ul>
 </div>
 

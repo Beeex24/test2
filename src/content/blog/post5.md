@@ -2,14 +2,14 @@
 title: '【オーバーウォッチ2】シーズン17最新情報｜新マップ投票システムとスタジアム大幅アップデート完全攻略'
 description: 'オーバーウォッチ2シーズン17の新システム「マップ投票」、スタジアムモード大幅アップデート、3つの新マップ、ミシックアイテム2種同時配信など最新情報を詳しく解説します。'
 pubDate: 'Jun 20 2025'
-heroImage: '/overwatch2/overfor.png'
+heroImage: '/pcgame/overwatch2/overfor.png'
 ---
 
 オーバーウォッチ2シーズン17が6月25日に開幕し、ゲームプレイを根本から変える革新的なアップデートが多数実装されました。本記事では、新システム「マップ投票」、スタジアムモードの大幅改良、3つの新マップ、ミシックアイテム同時配信など、シーズン17で追加された全ての新要素を詳しく解説します。
 
 ## シーズン17の主要アップデート概要
 
-![blog placeholder](/overwatch2/over5.png)
+![blog placeholder](/pcgame/overwatch2/over5.png)
 
 シーズン17では以下の大型アップデートが実装されています：
 
@@ -24,7 +24,7 @@ heroImage: '/overwatch2/overfor.png'
 
 ## 革新的な「マップ投票」システム詳細
 
-![blog placeholder](/overwatch2/over6.png)
+![blog placeholder](/pcgame/overwatch2/over6.png)
 
 ### マップ投票の仕組み
 
@@ -60,7 +60,7 @@ heroImage: '/overwatch2/overfor.png'
 
 ### 新マップ2種追加
 
-![blog placeholder](/overwatch2/over7.png)
+![blog placeholder](/pcgame/overwatch2/over7.png)
 
 **ESPERANCA**
 - スタジアム独自のプッシュルール適用
@@ -128,7 +128,7 @@ heroImage: '/overwatch2/overfor.png'
 
 ### D.Va用ミシック・スキン「ホランイ」
 
-![blog placeholder](/overwatch2/over8.png)
+![blog placeholder](/pcgame/overwatch2/over8.png)
 
 韓国の伝承に登場するアムールトラの精霊をモチーフとした美しいスキンです。
 
@@ -140,7 +140,7 @@ heroImage: '/overwatch2/overfor.png'
 
 ### リーパー用ミシック武器スキン「スティール・デス」
 
-![blog placeholder](/overwatch2/over9.png)
+![blog placeholder](/pcgame/overwatch2/over9.png)
 
 死神の鎌を彷彿とさせる恐ろしい武器スキンです。
 
@@ -155,7 +155,7 @@ heroImage: '/overwatch2/overfor.png'
 
 ## バトルパス報酬一覧
 
-![blog placeholder](/overwatch2/over11.png)
+![blog placeholder](/pcgame/overwatch2/over11.png)
 
 ### プレミアム報酬ハイライト
 

@@ -2,13 +2,13 @@
 title: '【Steam夏セール2025】話題の協力ホラーゲーム「R.E.P.O.」が史上最安値20%OFF！友達と楽しむ物理エンジン搭載の新感覚ホラー体験'
 description: 'Steam夏セール2025でコープホラーゲーム「R.E.P.O.」が史上最安値の20%OFFセール中！最大6人で楽しめる物理エンジンを活用した新感覚ホラーゲームの魅力とセール情報を詳しく解説します。'
 pubDate: 'July 04 2025'
-heroImage: '/sale/repoone.png'
+heroImage: '/pcgame/sale/repoone.png'
 category: 'SALE'
 ---
 
 ## 🎯 R.E.P.O. 史上最安値セール開催中！
 
-![blog placeholder](/sale/repothree.png)
+![blog placeholder](/pcgame/sale/repothree.png)
 
 話題沸騰中の協力ホラーゲーム「**R.E.P.O.**」が、Steam夏セール2025で史上最安値の20%OFFセールを実施中です！
 
@@ -23,7 +23,7 @@ category: 'SALE'
 
 ## 🌟 R.E.P.O. とは？
 
-![blog placeholder](/sale/repotwu.png)
+![blog placeholder](/pcgame/sale/repotwu.png)
 
 R.E.P.O.は、謎めいたAIコンピューターの指示のもと、幽霊に取り憑かれた場所から貴重品を回収する協力ホラーゲームです。最大6人でのマルチプレイに対応し、物理エンジンを活用した独特なゲームプレイが特徴です。
 

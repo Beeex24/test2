@@ -2,7 +2,7 @@
 title: '【ApexLegends】ハイショットイベント開催！新スキンとアリーナ：デュエル改良で夏を満喫'
 description: 'Apex Legendsの夏イベント「ハイショット」が開催中！レジェンドアビリティ解禁のアリーナ：デュエル、限定ビーチスキン、新格闘武器スカイピアサーなど見どころ満載。イベント攻略法も詳しく解説。'
 pubDate: 2025-07-14
-heroImage: '/apex/hishotsamune.png'
+heroImage: '/pcgame/apex/hishotsamune.png'
 category: 'apexlegends'
 ---
 
@@ -10,7 +10,7 @@ category: 'apexlegends'
 
 Apex Legendsの新イベント「ハイショット」が2025年7月10日より開催中です。このイベントでは、美しいビーチファッションスキンや新機能が満載で、プレイヤーを魅了すること間違いなし。本記事では、イベントの詳細と見どころを徹底解説します。
 
-![blog placeholder](/apex/hishot.png)
+![blog placeholder](/pcgame/apex/hishot.png)
 
 ## ハイショットイベントの概要
 
@@ -34,7 +34,7 @@ Apex Legendsの新イベント「ハイショット」が2025年7月10日より�
 
 ### 限定スキンとアイテム
 
-![blog placeholder](/apex/hishotskin.png)
+![blog placeholder](/pcgame/apex/hishotskin.png)
 
 #### レジェンダリースキン
 - **ローバ用レジェンダリースキン**（待望の新スキン！）
@@ -43,8 +43,8 @@ Apex Legendsの新イベント「ハイショット」が2025年7月10日より�
 
 #### 武器スキン
 
-![blog placeholder](/apex/301eventskin.png)
-![blog placeholder](/apex/wingmaneventskin.png)
+![blog placeholder](/pcgame/apex/301eventskin.png)
+![blog placeholder](/pcgame/apex/wingmaneventskin.png)
 
 - **R301カービン** - ビーチテーマスキン
 - **ウィングマン** - 夏限定デザイン
@@ -54,7 +54,7 @@ Apex Legendsの新イベント「ハイショット」が2025年7月10日より�
 
 イベント最大の目玉となる新アイテムが登場します。
 
-![blog placeholder](/apex/piaser.png)
+![blog placeholder](/pcgame/apex/piaser.png)
 
 **スカイピアサーの特徴：**
 - 全レジェンドが使用可能な汎用格闘アイテム

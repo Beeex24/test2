@@ -2,7 +2,7 @@
 title: 'R.E.P.O.の完全MODガイド - 導入からおすすめMODまで徹底解説【2025年最新版】'
 description: 'R.E.P.O.（Reliquary of Eden Post-Obscurus）のMOD導入方法から、おすすめMOD40種類以上を詳しく紹介。初心者でも簡単にMODを導入できるよう、画像付きで分かりやすく解説します。'
 pubDate: 2025-07-14
-heroImage: '/repo/repomod.png'
+heroImage: '/pcgame/repo/repomod.png'
 category: 'others'
 ---
 

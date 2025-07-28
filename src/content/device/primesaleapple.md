@@ -3,7 +3,7 @@ title: '【プライムデー2025】iPhone 15 Pro Max 512GB大容量モデルが
 description: 'Amazonプライムデー2025でiPhone 15 Pro Max 512GBが驚愕の28,000円割引！176,800円で購入可能。型落ちでも高性能、Apple Intelligence対応の大容量モデルを詳しく解説。'
 pubDate: '2025-07-11'
 updatedDate: '2025-07-11'
-heroImage: '/primeday/primeapplesale.png'
+heroImage: '/devicese/primeday/primeapplesale.png'
 category: 'others'
 ---
 
@@ -182,6 +182,8 @@ iPhone 15 Pro Max 512GBの28,000円割引は、2025年最大級のiPhoneセー�
   <h3>🔗 関連記事</h3>
   <ul>
     <li><a href="/device/primeday">🛒 プライムデー2025速報 - 目玉商品完全ガイド</a></li>
+    <li><a href="/device/primesaleapple">⚡ 【プライムデー2025】iPhone 15 Pro Max 512GBなど今年最大級の値引きセール</a></li>
+    <li><a href="/device/gigabytertx5070ti">📊 Gigabyte RTX 5070 Ti 詳細レビュー </a></li>
   </ul>
 </div>
 

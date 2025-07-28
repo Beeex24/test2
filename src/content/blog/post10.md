@@ -2,13 +2,13 @@
 title: '【Steam夏セール2025】【史上最安】Sons of the Forest が66%OFFの大セール中！今が買い時のサバイバルホラーゲーム'
 description: 'Steamで話題のサバイバルホラーゲーム「Sons of the Forest」が史上最安値の66%OFFセール実施中！The Forestの続編として注目を集める本作の魅力と現在のセール情報を詳しく解説します。'
 pubDate: 'June 28 2025'
-heroImage: '/sale/forest.png'
+heroImage: '/pcgame/sale/forest.png'
 category: 'SALE'
 ---
 
 ## 🎯 Sons of the Forest 史上最安値セール開催中！
 
-![blog placeholder](/sale/forest2.png)
+![blog placeholder](/pcgame/sale/forest2.png)
 
 **The Forest**の開発チームEndnight Gamesが手がける最新作「**Sons of the Forest**」が、Steamで史上最安値の66%OFFセールを実施中です！
 
@@ -22,7 +22,7 @@ category: 'SALE'
 
 ## 🌲 Sons of the Forest とは？
 
-![blog placeholder](/sale/forest3.png)
+![blog placeholder](/pcgame/sale/forest3.png)
 
 Sons of the Forestは、行方不明の億万長者を探すため孤島に送られたプレイヤーが、人食い族の住む地獄のような環境でサバイバルを繰り広げるオープンワールド・サバイバルホラーゲームです。
 
